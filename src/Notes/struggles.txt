@@ -1,0 +1,35 @@
+NAV BAR
+
+    The main struggle i spend my time on was in the dropdown menu for contacts near the profile icon at top right
+                It was tricky because i was trying ti kee it open even when i move cursor to it. The problem was that there was a gap so the cursor was going out of bounds. I kept trying to fix it without understanding that was the problem.
+
+    And the transition when i scroll is tough to fix
+
+    I wanna add some responsivity later, maybe make buttons sizes as percentages with a max size and also the same with max-height of the whole nav container
+
+
+BANNER 
+
+    
+
+
+{/* 
+        <div className='bannerContainer'>
+            <img className='bannerImg' src={bannerTemp.image} alt="" />
+            <div className='bannerTitleContainer'>
+                <img src={bannerTemp.logo} className="bannerLogo" />
+                <div className='bannerText'>
+                    <p>{bannerTemp.description}</p>
+                </div>
+            </div>
+        </div>
+
+        <div className='bannerContainer'>
+            <img className='bannerImg' src={bannerTemp2.image} alt="" />
+            <div className='bannerTitleContainer'>
+                <img src={bannerTemp.logo} className="bannerLogo" />
+                <div className='bannerText'>
+                    <p>{bannerTemp2.description}</p>
+                </div>
+            </div>
+        </div> */}

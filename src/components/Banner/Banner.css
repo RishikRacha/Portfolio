@@ -1,0 +1,82 @@
+.bannerContainer {
+    position:relative;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    
+}
+
+.bannerImg {
+    width: 100%;
+    height: 700px;
+    object-fit:cover;
+    z-index: 99;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+.banners {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    width: 100%;
+    user-select: none;
+    scrollbar-width: none;
+    overflow-y: hidden;
+}
+.banners::-webkit-scrollbar{
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: #0000002c; */
+    background: linear-gradient(to left, transparent, rgba(20, 20, 20, 0.435));
+    z-index: 1;
+    pointer-events: none;
+    /* mix-blend-mode: multiply; */
+}
+
+
+
+/* THIS IS FOR THE INFO ON TOP OF BANNER IMAGE */
+
+
+.bannerTitleContainer {
+    position: absolute;
+    top: -100px;
+    height: 700px;
+    padding: 60px;
+    width: 35%;
+    /* box-shadow: 0px 0px 10px black; */
+    z-index: 100;
+    display: flex; flex-direction: column; 
+    justify-content: center;
+    /* background: linear-gradient(to right, rgba(20, 20, 20, 0.607), rgba(223, 6, 6, 0)); */
+    
+}
+
+.bannerLogo {
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    /* background: radial-gradient(rgba(0, 0, 0, 0.205), rgba(25, 92, 199, 0)); */
+}
+
+.bannerText {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.731);
+    font-size: large;
+    line-height: 1.2;
+    max-lines: 5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    color: white;
+}
+
