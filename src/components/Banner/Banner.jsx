@@ -39,9 +39,9 @@ function Banner() {
   const [bannerItem, setBannerItem] = useState(bannersData[0]);
 
   return (
+    <>
     <div className='banners'>
         <div className='overlay'></div>
-
         {
             bannersData.map((bannerCurrent,index) => (
                 <div key={index} className='bannerContainer'>
@@ -56,8 +56,10 @@ function Banner() {
             </div>)
         )    
         }
-
-    </div>
+        </div>
+        <div className='bottomFadeOverlay' style = {{position: 'absolute', top: '550px', zIndex: 1,  height: '150px', background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0.97))', width: '100%'}}></div>
+        {/* <div className='bottomFadeOverlay' style = {{position: 'absolute', top: '600px', zIndex: 200,  height: '100px', background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0.97))', width: '100%'}}></div> */}
+        </>
   )
 }
 

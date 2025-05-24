@@ -1,0 +1,36 @@
+
+
+.bodyContainerNew {
+    position: relative;
+    top: -50px;
+    z-index: 2;
+    height: 1600px;
+    padding: 0 60px;
+}
+
+.cardsContainerNew {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    height: 144px;
+    padding: 10px 0px;
+    /* overflow: visible; */
+    /* overflow-x: scroll; */
+    /* overflow-y: visible; */
+}
+
+
+.cardsContainerNew::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+.rightbtn {
+    height: 144px;
+    width: 40px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 16;
+    align-self: flex-end;
+}
+
+

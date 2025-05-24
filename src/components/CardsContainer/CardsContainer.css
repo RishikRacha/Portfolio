@@ -1,4 +1,27 @@
 .cardsContainer {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    gap: 10px;
+    padding:0px 60px;
+    overflow-x: auto;
+    overflow-y: visible; 
+    z-index: 141;
+    position: relative;
+    /* overflow is showing up as scroll, and i am getting a scroll bar when scale is made 150% so i cant see the whole card which i could see when i dont add any overflow*/
 }
+
+.cardsContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+.subHeading {
+    padding: 60px;
+    padding-bottom: 0;
+}
+
+.bodyContainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+  
