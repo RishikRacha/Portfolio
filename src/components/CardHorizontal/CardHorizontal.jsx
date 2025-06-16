@@ -3,6 +3,8 @@ import './CardHorizontal.css'
 import DrumKitPhoto from '../../assets/CardsInfo/DrumKitCard.jpg'
 import SimonSaysPhoto from '../../assets/CardsInfo/SimonSaysCard.jpg'
 import Card from '../Card/Card'
+import { useNavigate } from 'react-router-dom'
+import CardExpanded from '../CardExpanded/CardExpanded'
 
 
 function CardHorizontal() {
@@ -21,10 +23,12 @@ function CardHorizontal() {
 
   return (
     <div className='bodyContainerNew'>
+
+
         <h2>Small Games I Made</h2>
 
         <div className='cardsContainerNew'>
-            <Card name={cardsInfo[0].name} image={cardsInfo[0].image} description={cardsInfo[0].description} />
+            <Card name={cardsInfo[0].name} image={cardsInfo[0].image} description={cardsInfo[0].description} path='/simonGame/simonGame.html' />
             <Card name={cardsInfo[1].name} image={cardsInfo[1].image} description={cardsInfo[1].description} />
             <Card name={cardsInfo[0].name} image={cardsInfo[0].image} description={cardsInfo[0].description} />
             <Card name={cardsInfo[1].name} image={cardsInfo[1].image} description={cardsInfo[1].description} />
@@ -41,6 +45,8 @@ function CardHorizontal() {
             <Card name={cardsInfo[0].name} image={cardsInfo[0].image} description={cardsInfo[0].description} />
             <Card name={cardsInfo[1].name} image={cardsInfo[1].image} description={cardsInfo[1].description} />
         </div>
+
+
 
       </div>
   )

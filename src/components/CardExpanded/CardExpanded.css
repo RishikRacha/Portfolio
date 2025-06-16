@@ -1,0 +1,49 @@
+.expandedCardContainer{
+    z-index: 10;
+    align-self: center;
+    margin-top: 34px;
+    
+    overflow: scroll;
+
+    /* display: flex; flex-direction: column; */
+    /* align-items: center; */
+
+    width: 65%;
+    min-width: 300px;
+
+    max-height: 100vh;
+    overflow-y: auto;
+    /* max-height: 100%;  */
+
+    border-radius: 12px;
+}
+
+.outerexpandedCardContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.611);
+    position:fixed;
+    
+    z-index: 1001;
+    display: flex; flex-direction: column;
+
+}
+
+.expandedImage {
+    width: 100%;
+    align-items: center;
+    position: relative;
+    /* z-index: 1009; */
+}
+
+.expandedDetails {
+    padding: 1rem;
+    position: relative;
+    background-color: rgba(24, 24, 24, 0.974);
+
+    top: -60px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

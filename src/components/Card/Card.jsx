@@ -1,13 +1,22 @@
 import React from 'react'
 import "./Card.css"
+import { useNavigate } from 'react-router-dom'
+import CardExpanded from '../CardExpanded/CardExpanded';
 
-function Card({name, image, description, index})  {
+function Card({name, image, description, path})  {
+
+  function clickHandler() {
+
+  }
+
   return (
-    <div className='cardContainer' style={{}}>
+    <div className='cardContainer hoverContainer' >
         <img src={image} alt={name} />
         <div className='cardText'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore molestias error quidem. Quasi veritatis ex minima nesciunt dicta, repellat fugit.</p>
+            <p>{description}</p>
         </div>
+
+
     </div>
   )
 }

@@ -45,19 +45,19 @@ function Banner() {
         {
             bannersData.map((bannerCurrent,index) => (
                 <div key={index} className='bannerContainer'>
-                <img className='bannerImg' src={bannerCurrent.image} alt="" style={{zIndex: bannerCurrent.id == 'painting' ? 1000 : 1}}/>
+                    <img className='bannerImg' src={bannerCurrent.image} alt="" style={{zIndex: bannerCurrent.id == 'painting' ? 1000 : 1}}/>
 
-                <div className='bannerTitleContainer'>
-                    <img src={bannerCurrent.logo} className="bannerLogo" alt="logo" />
-                    <div className='bannerText'>
-                        <p>{bannerCurrent.description}</p>
+                    <div className='bannerTitleContainer'>
+                        <img src={bannerCurrent.logo} className="bannerLogo" alt="logo" />
+                        <div className='bannerText'>
+                            <p>{bannerCurrent.description}</p>
+                        </div>
                     </div>
                 </div>
-            </div>)
-        )    
+            ))    
         }
-        </div>
-        <div className='bottomFadeOverlay' style = {{position: 'absolute', top: '550px', zIndex: 1,  height: '150px', background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0.97))', width: '100%'}}></div>
+    </div>
+    <div className='bottomFadeOverlay' style = {{position: 'absolute', top: '550px', zIndex: 1,  height: '150px', background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0.97))', width: '100%'}}></div>
         {/* <div className='bottomFadeOverlay' style = {{position: 'absolute', top: '600px', zIndex: 200,  height: '100px', background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0.97))', width: '100%'}}></div> */}
         </>
   )

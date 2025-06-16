@@ -5,20 +5,20 @@ import Banner from './components/Banner/Banner'
 import Card from './components/Card/Card'
 import CardsContainer from './components/CardsContainer/CardsContainer'
 import CardHorizontal from './components/CardHorizontal/CardHorizontal'
+import CardExpanded from './components/CardExpanded/CardExpanded'
 
 function App() {
-  const [count, setCount] = useState(0);
-  
-
-  
+  const [isCardClicked, setIsCardClicked] = useState(false);
 
   return (
     <>
       <Nav />
       <Banner />
 
-      {/* <CardsContainer /> */}
+    {/* <CardsContainer /> */}
       <CardHorizontal />
+
+    {isCardClicked && <CardExpanded />}
 
     </>
   )

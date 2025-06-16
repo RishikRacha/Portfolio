@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+}
+
+.star-wars-wrapper {
+    height: 300vh; /* Page scroll height */
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    perspective: 1000px;
+    padding-top: 100vh; /* Start crawl halfway down */
+  }
+  
+  .crawl {
+    text-align: center;
+    transform-origin: bottom center;
+    transition: transform 0.1s ease-out;
+  }
+  

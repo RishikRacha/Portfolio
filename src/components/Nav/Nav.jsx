@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react'
 import './Nav.css'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import profileIcon from '../../assets/coverImg_suit.JPG'
 import whiteArrow from '../../assets/whiteArrow.png'
 import phoneIcon from '../../assets/phoneIcon.png'
 
-
+// const navigate = useNavigate();
 let linkedInIcon = 'https://ytpr.co.ke/wp-content/uploads/2020/06/linkedin-icon-png-transparent-background-8.png';
 let githubIcon = 'https://img.icons8.com/ios11/512/FFFFFF/github.png';
 
@@ -30,7 +30,7 @@ function Nav() {
             <h1 className='title'>MERNFLIX</h1>
             <Link className='navButton' to="/">Home</Link>
             <Link className='navButton' to="/learning">Learning</Link>
-            <Link className='navButton' to="/projects">Projects</Link>
+            <Link className='navButton' to="/simonGame/simonGame.html" >Projects</Link>
             <Link className='navButton' to="/resume">Resume/CV</Link>
         </div>
         <div className='right'>
