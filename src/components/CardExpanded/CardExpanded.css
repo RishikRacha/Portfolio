@@ -1,19 +1,15 @@
 .expandedCardContainer{
     z-index: 10;
     align-self: center;
-    margin-top: 34px;
-    
+    margin-top: 30px;
+    position: relative;
     overflow: scroll;
 
-    /* display: flex; flex-direction: column; */
-    /* align-items: center; */
-
     width: 65%;
-    min-width: 300px;
+    min-width: 550px;
 
     max-height: 100vh;
     overflow-y: auto;
-    /* max-height: 100%;  */
 
     border-radius: 12px;
 }
@@ -23,7 +19,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.611);
     position:fixed;
-    
+
     z-index: 1001;
     display: flex; flex-direction: column;
 
@@ -36,12 +32,62 @@
     /* z-index: 1009; */
 }
 
-.expandedDetails {
+.expandedDetailsContainer {
     padding: 1rem;
     position: relative;
     background-color: rgba(24, 24, 24, 0.974);
-
     top: -60px;
+}
+
+.expandedDetails{
+    padding: 0 40px;
+}
+
+.closeCardBtn {
+    /* position: absolute; */
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 100px;
+    z-index: 1;
+    margin: 18px;
+    background-image: url('https://png.pngtree.com/png-vector/20220628/ourmid/pngtree-icon-close-button-incorrect-forbidden-png-image_5286028.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.closeCardBtn:hover {
+    border-color:#1a1a1a;
+}
+
+.closeDiv {
+    /* background-color: #ef35358d; */
+    position: absolute;
+    z-index: 1;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    width: 100%;
+}
+
+.playBtn {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+}
+.playBtn a {
+    background: white;
+    border: 2px solid #535252;
+    border-radius: 12px;
+    padding: 16px 64px;
+    margin: 80px;
+    
+    color: #1a1a1a;
+    font-size:x-large;
+    font-weight: 700;
 }
 
 ::-webkit-scrollbar {

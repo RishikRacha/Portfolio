@@ -30,7 +30,7 @@ function Nav() {
             <h1 className='title'>MERNFLIX</h1>
             <Link className='navButton' to="/">Home</Link>
             <Link className='navButton' to="/learning">Learning</Link>
-            <Link className='navButton' to="/simonGame/simonGame.html" >Projects</Link>
+            <Link className='navButton' to="/#bodyContainerNew" >Projects</Link>
             <Link className='navButton' to="/resume">Resume/CV</Link>
         </div>
         <div className='right'>

@@ -2,8 +2,13 @@ import React from 'react'
 import './CardExpanded.css'
 import DrumKitPhoto from '../../assets/CardsInfo/DrumKitCard.jpg';
 import SimonSaysPhoto from '../../assets/CardsInfo/SimonSaysCard.jpg';
+import { useSelector, useDispatch } from 'react-redux';
+import { isCardExpandedActionCreator } from '../../redux/actionCreatorPortfolio';
 
 function CardExpanded() {
+    const reduxCardInfo = useSelector((store) => {return store.cardInfo});
+    let dispatch = useDispatch();
+
     let cardsInfo = [
             {   name: 'Drum Kit',
                 image: DrumKitPhoto,
@@ -16,22 +21,38 @@ function CardExpanded() {
             },
         ];
 
+    const closeClickHandler = () => {
+        dispatch(isCardExpandedActionCreator(false));
+    }
+
   return (
     <div className='outerexpandedCardContainer' >
-        
-    <div className='expandedCardContainer' >
-        <img src={DrumKitPhoto} alt="logo of DrunKit" className="expandedImage"/>
-        <div className='bottomFaeOverlay' style = {{position: 'relative', top: '-60px',  height: '50px', background: 'linear-gradient(to bottom, rgba(40, 163, 140, 0), rgba(24, 24, 24, 0.974))', width: '100%', zIndex:1010}}></div>
+    
 
-        <div className='expandedDetails'>
-            <br />
-            <button>hi</button> <button>bye</button>
-            <br />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, beatae ex fugiat impedit tempore voluptatum a commodi dolore aliquam non, accusamus soluta obcaecati debitis possimus reprehenderit dolorem minus rerum provident.</p>
-            <br />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam assumenda velit laborum sint consequatur facilis dolorum eius corporis dolore esse!</p>
-            <br />
-            <button>idk</button>
+    <div className='expandedCardContainer' >
+        <div className='closeDiv' ><button className='closeCardBtn' onClick={closeClickHandler}></button></div>
+
+        <img src={reduxCardInfo.image} alt="logo of DrunKit" className="expandedImage"/>
+
+
+        <div className='bottomFadeOverlay2' style = {{position: 'relative', top: '-60px',  height: '50px', background: 'linear-gradient(to bottom, rgba(40, 163, 140, 0), rgba(24, 24, 24, 0.974))', width: '100%', zIndex:1010}}>
+            <div className='playBtn'> <a href={reduxCardInfo.url}> Open </a>   </div>
+        </div>
+
+        <div className='expandedDetailsContainer'>
+            <div className='expandedDetails'>
+                <h2>{reduxCardInfo.name}</h2>
+                {console.log('THIS IS THE INFO IN THE EXPANDED CARD',reduxCardInfo)}
+                <br />
+                <p>{reduxCardInfo.description}</p>
+                <br />
+                <button>hi</button> <button>bye</button>
+                <br />
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, beatae ex fugiat impedit tempore voluptatum a commodi dolore aliquam non, accusamus soluta obcaecati debitis possimus reprehenderit dolorem minus rerum provident.</p>
+                <br />
+                <button>idk</button>
+            </div>    
+            
         </div>
     </div>
     </div>

@@ -1,5 +1,3 @@
-
-
 .bodyContainerNew {
     position: relative;
     top: -50px;
@@ -14,23 +12,78 @@
     position: relative;
     height: 144px;
     padding: 10px 0px;
+    transition: transform 0.4s ease-in-out;
+    
+
     /* overflow: visible; */
     /* overflow-x: scroll; */
     /* overflow-y: visible; */
 }
 
+.moveLeft1024 {transform: translateX(-95%);}
 
-.cardsContainerNew::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-
-.rightbtn {
-    height: 144px;
-    width: 40px;
-    background-color: #fff;
-    position: absolute;
-    z-index: 16;
-    align-self: flex-end;
+.leftrightbtns {
+    display: flex;
+    top: -160px;
+    position: relative;
+    width: 100vw;
+    left: -60px;
+    justify-content: space-between;
+    height: 0;
 }
 
+.rightbtn {
+    height: 160px;
+    width: 80px;
+    /* background-color: #fff; */
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(20, 20, 20, 1)
+    );
+    /* right: 60px; */
+    /* left: 100%; */
+    z-index: 16;
+    display: inline-block;
+    justify-self: flex-end;
+}
 
+.leftbtn {
+    justify-self: flex-start;
+    height: 160px;
+    width: 80px;
+    /* background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0)); */
+    z-index: 16;
+    display: inline-block;
+}
+
+.lrbtn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 80%;
+    transition-duration: 0.3s;
+}
+.rightbtn img {
+    rotate: 180deg;
+}
+
+.lrbtn:hover img {
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+.rightbtn:hover {
+    background: linear-gradient(
+        to right,
+        rgba(20, 20, 20, 0.3),
+        rgba(20, 20, 20, 1)
+    );
+}
+.leftbtn:hover {
+    background: linear-gradient(
+        to left,
+        rgba(20, 20, 20, 0.3),
+        rgba(20, 20, 20, 1)
+    );
+}
