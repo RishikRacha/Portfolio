@@ -26,6 +26,11 @@
     text-shadow: 1px 3px 2px darkred;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: xx-large;
+    transition: font-size 0.5s ease;
+}
+
+.opaque .title {
+    font-size: 2.1rem;
 }
 
 .left {

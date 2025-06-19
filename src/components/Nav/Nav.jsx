@@ -13,9 +13,7 @@ function Nav() {
   const [isOpaque, setIsOpaque] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsOpaque(window.scrollY > 10);
-    };
+    const handleScroll = () => {setIsOpaque(window.scrollY > 10);}; // make nav opaque after scrolling a lil bit
 
     window.addEventListener('scroll', handleScroll);
 
@@ -39,8 +37,8 @@ function Nav() {
         <div className='left'>
             <h1 className='title' onClick={scrollToSection}>MERNFLIX</h1>
             <Link className='navButton' to="/" onClick={() => scrollToSection(11)}>Home</Link>
-            <Link className='navButton' to="/#learning">Skills</Link>
-            <Link className='navButton' to="/#bodyContainerNew" >Projects</Link>
+            <Link className='navButton' to="/#subheading1" >Projects</Link>
+            <Link className='navButton' to="/#subheading2">Skills</Link>
             <Link className='navButton' to="/public/resume">Resume/CV</Link>
         </div>
         <div className='right'>

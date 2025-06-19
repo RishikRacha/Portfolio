@@ -6,17 +6,22 @@ function IsSeven() {
 
     const [isSevenInput, setIsSevenInput] = useState();
     const [isCheckingSeven, setIsCheckingSeven] = useState(false);
-    const [isCheckComplete, setIsCheckComplete] = useState(false);
+    const [isCheckComplete, setIsCheckComplete] = useState();
 
     function handleState(e) {
         setIsSevenInput(e.target.value.trim().toLowerCase());
     }
 
+    function checkIsSeven() {
+        if(isSevenInput == 7 || isSevenInput == 'seven') return true;
+        else return false;
+    }
+
     function handleSumbit(e) {
-        setIsCheckComplete(false);
+        setIsCheckComplete(undefined);      //undefined is registered as false for both ==true and ==false so it removes the isSevenResult div
         e.preventDefault();
         setIsCheckingSeven(true);
-        setTimeout(()=>{setIsCheckingSeven(false); setIsCheckComplete(true)}, 30000);
+        setTimeout(()=>{setIsCheckingSeven(false); setIsCheckComplete(isSevenInput == 7);}, 3000);
     }
 
 
@@ -37,11 +42,11 @@ const alwaysShow = [
         <button className='submitIsSeven' onClick={handleSumbit}>{isSevenInput ? isSevenInput : 'Check'}</button>
 
         {isCheckingSeven  &&  <TypewriterStatusChain />}
-        {isCheckComplete  && 'DONE'}
         <div className='isSevenResult'>
-            <div>
-                {isCheckComplete || <h2>YEP, IT'S 7</h2>}
-            </div>
+                {isCheckComplete==true ? <h3>YEP, IT'S 7</h3> : null }
+                {isCheckComplete==false ? <h3>IT'S NOT 7</h3> : null}
+                {/* {console.log(isCheckComplete==true)}
+                {console.log(isCheckComplete==false)} */}
         </div>
 
     </div>

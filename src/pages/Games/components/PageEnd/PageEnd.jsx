@@ -5,7 +5,7 @@ import IsSeven from "../IsSeven/IsSeven";
 function PageEnd() {
     return (
         <div className="pageEndContainer">
-            <h2>Experience</h2>
+            <h2>Fin</h2>
             <div className="leftrightDivs">
                 <div className="leftDiv">
 

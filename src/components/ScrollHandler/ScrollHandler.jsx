@@ -9,15 +9,18 @@ export default function ScrollHandler() {
   useEffect(() => {
     const hash = location.hash;
 
-    if (hash === '#bodyContainerNew') {
-      const el = document.getElementsByClassName(hash.slice(1))[0];
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (hash === '#subheading1') {
+      const el = document.getElementsByClassName('bodyTitle')[0];
+      if (el) {
+        const elementTop = el.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: elementTop-80 , behavior: 'smooth' });
+      }
     } 
-    else if (hash === '#learning') {
+    else if (hash === '#subheading2') {
       const el = document.getElementsByClassName('bodyTitle')[1];
       if (el) {
         const elementTop = el.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({ top: elementTop , behavior: 'smooth' });
+        window.scrollTo({ top: elementTop-80 , behavior: 'smooth' });
       }
     } 
 
