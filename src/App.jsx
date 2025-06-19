@@ -6,7 +6,10 @@ import Banner from './components/Banner/Banner'
 import CardHorizontal from './components/CardHorizontal/CardHorizontal'
 import CardExpanded from './components/CardExpanded/CardExpanded'
 import { useSelector } from 'react-redux'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import Resume from './components/Resume/Resume'
+import ScrollHandler from './components/ScrollHandler/ScrollHandler'
+import PageEnd from './pages/Games/components/PageEnd/PageEnd'
 
 
 function App() {
@@ -14,27 +17,22 @@ function App() {
   const isCardClicked = useSelector(store => {return store.isCardExpanded})
   const navigate = useNavigate();
 
-  const location = useLocation();
-    if (location.hash === '#bodyContainerNew') {
-      const el = document.getElementsByClassName(location.hash.slice(1))[0]; // remove the '#'
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-      navigate();
-    }
-
-
 
   return (
     <>
-      <Nav />
-      <Banner />
+    <ScrollHandler/>
+    <Routes>
+      <Route path='*' element={<>
+        <Nav />
+        <Banner />
+        <CardHorizontal />
+        {isCardClicked && <CardExpanded/>}
+        <PageEnd />
 
-    {/* <CardsContainer /> */}
-      <CardHorizontal />
-
-    {isCardClicked && <CardExpanded />}
-
+        </>}/>
+    <Route path='/public/resume' element={<Resume />}/>
+    
+    </Routes>
     </>
   )
 }

@@ -44,33 +44,32 @@
 }
 
 .closeCardBtn {
-    /* position: absolute; */
-    padding: 0px;
     width: 40px;
     height: 40px;
-    text-align: center;
-    border-radius: 100px;
-    z-index: 1;
     margin: 18px;
-    background-image: url('https://png.pngtree.com/png-vector/20220628/ourmid/pngtree-icon-close-button-incorrect-forbidden-png-image_5286028.png');
-    background-size: cover;
-    background-position: center;
+
+    border-radius: 100%;
+    border: 2px solid rgba(30, 30, 30, 1);
+
+    background-image: url('../../assets/plus.png');
+    rotate: 45deg;
+    background-size: cover;     background-position: center;
 }
 
 .closeCardBtn:hover {
-    border-color:#1a1a1a;
+    border-color: rgb(30, 30, 30);
+    background-color: rgba(30, 30, 30, 0.974);
 }
 
 .closeDiv {
-    /* background-color: #ef35358d; */
     position: absolute;
     z-index: 1;
+    width: 100%;
+
 
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-
-    width: 100%;
 }
 
 .playBtn {
@@ -79,8 +78,8 @@
     width: 200px;
 }
 .playBtn a {
-    background: white;
-    border: 2px solid #535252;
+    background: rgb(245, 245, 245);
+    border: 2px solid rgb(220, 220, 220);
     border-radius: 12px;
     padding: 16px 64px;
     margin: 80px;
@@ -89,6 +88,10 @@
     font-size:x-large;
     font-weight: 700;
 }
+.playBtn a:hover {
+    background: rgb(225, 225, 225);
+}
+
 
 ::-webkit-scrollbar {
     display: none;

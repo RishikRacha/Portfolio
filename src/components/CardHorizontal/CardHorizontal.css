@@ -2,7 +2,9 @@
     position: relative;
     top: -50px;
     z-index: 2;
-    height: 1600px;
+    /* height: 1600px; */
+    /* height: 100vh; */
+    min-height: 700px;
     padding: 0 60px;
 }
 
@@ -12,6 +14,7 @@
     position: relative;
     height: 144px;
     padding: 10px 0px;
+    padding-bottom: 30px;
     transition: transform 0.4s ease-in-out;
     
 
@@ -20,11 +23,21 @@
     /* overflow-y: visible; */
 }
 
+.bodyTitle {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
 .moveLeft1024 {transform: translateX(-95%);}
 
 .leftrightbtns {
     display: flex;
-    top: -160px;
+    /* top: -160px; */
     position: relative;
     width: 100vw;
     left: -60px;
@@ -33,7 +46,7 @@
 }
 
 .rightbtn {
-    height: 160px;
+    height: 164px;
     width: 80px;
     /* background-color: #fff; */
     background: linear-gradient(
@@ -50,9 +63,9 @@
 
 .leftbtn {
     justify-self: flex-start;
-    height: 160px;
+    height: 164px;
     width: 80px;
-    /* background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0)); */
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(20, 20, 20, 0));
     z-index: 16;
     display: inline-block;
 }

@@ -2,25 +2,40 @@ import React from 'react'
 import './CardHorizontal.css'
 import DrumKitPhoto from '../../assets/CardsInfo/DrumKitCard.jpg'
 import SimonSaysPhoto from '../../assets/CardsInfo/SimonSaysCard.jpg'
+import PrimEraLogo from '../../assets/CardsInfo/PrimEraLogo.jpg'
 import Card from '../Card/Card'
 import { useNavigate } from 'react-router-dom'
 import CardExpanded from '../CardExpanded/CardExpanded'
 import arrow from '../../assets/whiteArrowLeft.png'
+import plus from '../../assets/plus.png'
+
 
 
 function CardHorizontal() {
     let cardsInfo = [
         {   name: 'Drum Kit',
             image: DrumKitPhoto,
-            description: 'This is a simple HTML, CSS and Javascript page ',
-            url: 'simonGame/simonGame.html'
+            description: <p>This is a simple HTML, CSS and Javascript page '</p>,
+            url: '/drumkit/index.html'
         },
         {
             name: 'Simon Says',
             image: SimonSaysPhoto,
-            description: 'A fun memory game where you have to follow the random pattern on each level.',
+            description: <p>A fun memory game where you have to follow the random pattern on each level.</p>,
             url: 'simonGame/simonGame.html'
         },
+        {
+            name: 'PrimEra Medical Technologies',
+            image: PrimEraLogo,
+            description: <><br /> <button>Company Information</button></>,
+            url:'https://www.linkedin.com/company/primeramt' ,
+        },
+        {
+            name: 'Swecha',
+            image: 'https://media.licdn.com/dms/image/v2/C561BAQGMDl2O-bVO-A/company-background_10000/company-background_10000/0/1613791082651/swechafsmi_cover?e=2147483647&v=beta&t=2O4aaAWzLZ2j3vF3BiRRUXZ3GToFvTijN_YUBPgeOnQ',
+            description: <h3>SDE Intern at Swecha</h3>,
+            url: 'https://www.linkedin.com/company/swechafsmi',
+        }
     ];
 
     function goRightHandler(toRight ,i) {
@@ -38,13 +53,21 @@ function CardHorizontal() {
         }
     }
 
+    function LrButtons(i) {
+        return (
+            <div className='leftrightbtns'>
+                <div className='leftbtn  lrbtn' onClick={() => {goRightHandler(false,i)}}> <img src={arrow}/> </div>
+                <div className='rightbtn lrbtn' onClick={() => {goRightHandler(true, i)}}> <img src={arrow}/> </div>
+            </div>
+        )
+    }
 
   return (
     <div className='bodyContainerNew'>
 
 
-        <h2 id='bodytitle'>Small Games I Made</h2>
-
+        <h2 className='bodyTitle'>Small Games I Made</h2>
+        {LrButtons(0)}
         <div className='cardsContainerNew'>
             <Card name={cardsInfo[0].name} image={cardsInfo[0].image} description={cardsInfo[0].description} url= {cardsInfo[0].url} />
             <Card name={cardsInfo[1].name} image={cardsInfo[1].image} description={cardsInfo[1].description} url= {cardsInfo[1].url} />
@@ -53,24 +76,27 @@ function CardHorizontal() {
             <Card name={cardsInfo[0].name} image={cardsInfo[0].image} description={cardsInfo[0].description} url= {cardsInfo[0].url} />
             <Card name={cardsInfo[1].name} image={cardsInfo[1].image} description={cardsInfo[1].description} url= {cardsInfo[1].url} />
         </div>
-        <div className='leftrightbtns'>
-            <div className='leftbtn  lrbtn' onClick={() => {goRightHandler(false,0)}}> <img src={arrow}/> </div>
-            <div className='rightbtn lrbtn' onClick={() => {goRightHandler(true, 0)}}> <img src={arrow}/> </div>
-        </div>
+       
 
-        <h2>My skills</h2>
-        <div className='cardsContainerNew'>
-            <Card name={cardsInfo[0].name} image={cardsInfo[0].image} description={cardsInfo[0].description} />
-            <Card name={cardsInfo[1].name} image={cardsInfo[1].image} description={cardsInfo[1].description} />
-        </div>
-        <div className='leftrightbtns'>
+        <h2 className='bodyTitle'>My skills</h2>
+        {/* <div className='leftrightbtns'>
             <div className='leftbtn  lrbtn' onClick={() => {goRightHandler(false,1)}}> <img src={arrow}/> </div>
             <div className='rightbtn lrbtn' onClick={() => {goRightHandler(true, 1)}}> <img src={arrow}/> </div>
+        </div> */}
+        <div className='cardsContainerNew'>
+            <Card {...cardsInfo[0]}/>
+            <Card {...cardsInfo[1]} />
         </div>
 
 
+        <h2 className='bodyTitle'>Experience</h2>
+        {LrButtons(2)}
+        <div className='cardsContainerNew'>
+            <Card name='Cybersecurity Intern, Primera Medical Technologies' image={PrimEraLogo} description={cardsInfo[2].description} url={cardsInfo[2].url}/>
+            <Card {...cardsInfo[3]}/>
+        </div>
 
-      </div>
+    </div>
   )
 }
 

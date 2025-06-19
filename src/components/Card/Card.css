@@ -8,9 +8,9 @@
     z-index: 2;
 }
 
-.cardContainer img {
+.cardContainer > img {
     width: 100%;
-    object-fit: contain;
+    object-fit:fill;
     
 }
 
@@ -42,4 +42,25 @@
     display: block;
     transition: display 0.35s ease;
 
+}
+
+.cardinfobtn {
+    width: 32px;
+    height: 32px;
+    opacity: 85%;
+    object-fit:cover;
+    border-radius: 100%;
+    background-color: rgb(26, 26, 26);
+    border: 2px solid rgb(50, 50, 50);
+}
+
+.cardinfobtn:hover{
+    border-color: rgba(255, 247, 247, 0.8);
+    background-color: rgb(32, 32, 32);
+    opacity: 100%;
+}   
+
+.cardText div {
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,0 +1,10 @@
+.Typewriter span{
+    color: red;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: large;
+}
+
+.Typewriter {
+    margin-top: 80px;
+}

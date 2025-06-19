@@ -23,15 +23,25 @@ function Nav() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  function scrollToSection(y) {             // only to scroll to home and top quickly
+    window.scrollTo({top: y, behavior: 'smooth'})
+  }
+
+  function phoneClickHandler() {
+    navigator.clipboard.writeText("+91 9676644007");
+    document.getElementById('mobileText').innerHTML = '<p style="color: red; font-size: 12px">Copied to Clipboard</p>';
+    setTimeout(() => document.getElementById('mobileText').innerText = 'Mobile', 500)
+  }
+
   
   return (
     <div className={`navContainer ${isOpaque ? 'opaque' : ''}`}>
         <div className='left'>
-            <h1 className='title'>MERNFLIX</h1>
-            <Link className='navButton' to="/">Home</Link>
-            <Link className='navButton' to="/learning">Learning</Link>
+            <h1 className='title' onClick={scrollToSection}>MERNFLIX</h1>
+            <Link className='navButton' to="/" onClick={() => scrollToSection(11)}>Home</Link>
+            <Link className='navButton' to="/#learning">Skills</Link>
             <Link className='navButton' to="/#bodyContainerNew" >Projects</Link>
-            <Link className='navButton' to="/resume">Resume/CV</Link>
+            <Link className='navButton' to="/public/resume">Resume/CV</Link>
         </div>
         <div className='right'>
             <div className='profileContainer' >
@@ -41,14 +51,10 @@ function Nav() {
                 </div>
 
                 <div id='dropdownMenu'>
-                    {/* <a className='dropdownButtons'> <img className="profileIconImg" src={profileIcon} /> <a>Mobile</a></a>
-                    <a className='dropdownButtons' href='https://www.google.com'> <img className="profileIconImg" src={profileIcon} /> <a>LinkedIn</a></a>
-                    <a className='dropdownButtons'> <img className="profileIconImg" src={profileIcon} /> <a>Github</a></a> */}
-
                                     
-                <div className="dropdownButtons" onClick={() => navigator.clipboard.writeText("9779977979")}>
+                <div className="dropdownButtons" onClick={phoneClickHandler}>
                     <img className="dropdownIconImg" src={phoneIcon} alt="icon" />
-                    <span>Mobile</span>
+                    <span id='mobileText'>Mobile</span>
                 </div>
 
                 <a className="dropdownButtons" href="https://in.linkedin.com/in/rishikracha" target="_blank">
