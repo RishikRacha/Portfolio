@@ -13,27 +13,17 @@ function IsSeven() {
     }
 
     function checkIsSeven() {
-        if(isSevenInput == 7 || isSevenInput == 'seven') return true;
-        else return false;
+        return (isSevenInput == 'seven' || isSevenInput == 7);
+        console.log(isSevenInput);
+        
     }
 
     function handleSumbit(e) {
         setIsCheckComplete(undefined);      //undefined is registered as false for both ==true and ==false so it removes the isSevenResult div
-        e.preventDefault();
         setIsCheckingSeven(true);
-        setTimeout(()=>{setIsCheckingSeven(false); setIsCheckComplete(isSevenInput == 7);}, 3000);
+        setTimeout(()=>{setIsCheckingSeven(false); setIsCheckComplete(checkIsSeven());}, 30000);
     }
 
-
-const alwaysShow = [
-    "Processing data...",
-    "Drinking some coffee first...",
-    "Reaching servers...",
-    "Cross-examining a very nervous 6...",
-    "Asking ChatGPT...",
-    "Now asking some real humans for verification...",
-    "Asking the number Gods now...",
-];
 
   return (
     <div className='isSevenContainer'>
@@ -43,10 +33,8 @@ const alwaysShow = [
 
         {isCheckingSeven  &&  <TypewriterStatusChain />}
         <div className='isSevenResult'>
-                {isCheckComplete==true ? <h3>YEP, IT'S 7</h3> : null }
-                {isCheckComplete==false ? <h3>IT'S NOT 7</h3> : null}
-                {/* {console.log(isCheckComplete==true)}
-                {console.log(isCheckComplete==false)} */}
+                {isCheckComplete==true ? <h3>YEP, IT'S 7 👀</h3> : null }
+                {isCheckComplete==false ? <h3>IT'S NOT 7 @_@</h3> : null}
         </div>
 
     </div>
