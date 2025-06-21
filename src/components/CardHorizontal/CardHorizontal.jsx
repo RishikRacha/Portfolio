@@ -20,25 +20,25 @@ function CardHorizontal() {
         {   name: 'Drum Kit',
             image: DrumKitPhoto,
             description: <p>This is a simple HTML, CSS and Javascript page '</p>,
-            url: '/drumkit/index.html'
+            url: '/Portfolio/drumkit/index.html'
         },
         {
             name: 'Simon Says',
             image: SimonSaysPhoto,
             description: <span>A fun memory game where you have to follow the random pattern on each level.</span>,
-            url: 'simonGame/simonGame.html'
+            url: '/Portfolio/simonGame/simonGame.html'
         },
         {
             name: 'Is it 7?',
             image: IsSevenCard,
             description: <p>Check if something is 7 or not</p>,
-            url: './game/isSeven'
+            url: '/Portfolio/game/isSeven'
         },
         {
             name: 'Feed The Guy',
             image: FeedTheManCard,
             description: <span>Feed the guy... and keep him healthy perhaps? Your choice though, I don't wanna impose</span>,
-            url: '/game/FeedTheGuy'
+            url: '/Portfolio/game/FeedTheGuy'
         },
         {
             name: 'Work Experience',

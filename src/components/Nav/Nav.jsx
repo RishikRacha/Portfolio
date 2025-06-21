@@ -39,7 +39,7 @@ function Nav() {
             <Link className='navButton' to="/" onClick={() => scrollToSection(11)}>Home</Link>
             <Link className='navButton' to="/#subheading1" >Projects</Link>
             <Link className='navButton' to="/#subheading2">Skills</Link>
-            <Link className='navButton' to="/#subheading3" onClick={() => scrollToSection(1000)}>Experience</Link>
+            <Link className='navButton' onClick={() => scrollToSection(1000)}>Experience</Link>
             <Link className='navButton' to="https://drive.google.com/file/d/1b_ZxWaDCkHatgYN8gQ7Z3CEzrCUEtfgK/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>
         <div className='right'>

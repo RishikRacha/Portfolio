@@ -5,6 +5,7 @@ import SimonSaysPhoto from '../../assets/CardsInfo/SimonSaysCard.jpg';
 import { useSelector, useDispatch } from 'react-redux';
 import { isCardExpandedActionCreator } from '../../redux/actionCreatorPortfolio';
 import plus from '../../assets/plus.png'
+import { Link } from 'react-router-dom';
 
 
 function CardExpanded() {
@@ -38,7 +39,7 @@ function CardExpanded() {
 
 
         <div className='bottomFadeOverlay2' style = {{position: 'relative', top: '-60px',  height: '50px', background: 'linear-gradient(to bottom, rgba(40, 163, 140, 0), rgba(24, 24, 24, 0.974))', width: '100%', zIndex:1010}}>
-            <div className='playBtn'> <a href={reduxCardInfo.url}>▶Play</a>   </div>
+            <div className='playBtn'> <Link to={reduxCardInfo.url}>▶Play</Link>   </div>
         </div>
 
         <div className='expandedDetailsContainer'>

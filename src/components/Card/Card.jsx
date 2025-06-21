@@ -7,6 +7,7 @@ import play from '../../assets/play.png'
 import myStore from "../../redux/storePortfolio";
 import {isCardExpandedActionCreator, cardInfoActionCreator} from "../../redux/actionCreatorPortfolio";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Card({ name, image, description, url, expandedInfo }) {
     const dispatch = useDispatch();
@@ -36,13 +37,13 @@ function Card({ name, image, description, url, expandedInfo }) {
                 <div>
                     {/* <button onClick={clickHandler} className="cardinfobtn goBtn"  style={{backgroundImage: `url(${arrow})`}} ></button> */}
                     <span href={url} > 
-                        <a href={url} rel="noopener noreferrer"> 
+                        <Link to={url} rel="noopener noreferrer"> 
                             <img className="cardinfobtn goBtn"  src={play} />
-                        </a>
+                        </Link>
 
-                        <a href={url} target="_blank" rel="noopener noreferrer" onClick={clickHandler}> 
+                        <Link to={url} target="_blank" rel="noopener noreferrer" onClick={clickHandler}> 
                             <img className="cardinfobtn moregoBtn"  src={plus} />
-                        </a>
+                        </Link>
                     </span>
 
                     <img onClick={clickHandler} className="cardinfobtn moreBtn"  src={arrow} />

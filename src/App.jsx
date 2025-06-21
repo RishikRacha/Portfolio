@@ -31,9 +31,8 @@ function App() {
         {isCardClicked && <CardExpanded/>}
         <PageEnd />
         </>}/>
-      <Route path='/public/resume' element={<Resume />}/>
-      <Route path='/game/isSeven' element={<IsSeven />}/>
-      <Route path='/game/FeedTheGuy' element={<FeedTheGuy />}/>
+      <Route path='/Portfolio/game/isSeven' element={<IsSeven />}/>
+      <Route path='/Portfolio/game/FeedTheGuy' element={<FeedTheGuy />}/>
     </Routes>
     </>
   )
