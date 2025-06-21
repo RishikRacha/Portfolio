@@ -12,6 +12,7 @@ import FeedTheManCard from '../../assets/CardsInfo/FeedTheManCard.jpg'
 import Card from '../Card/Card'
 import arrow from '../../assets/whiteArrowLeft.png'
 import cardsInfo from './CardInfo'
+import MinimalCard from '../MinimalCard/MinimalCard'
 
 
 
@@ -57,15 +58,22 @@ function CardHorizontal() {
             </div>
        
 
-        <h2 className='bodyTitle'>My skills</h2>
+        <h2 className='bodyTitle'>Programming skills</h2>
+        {LrButtons(1)}
         <div className='cardsContainerNew'>
-            <Card {...cardsInfo[1]}/>
-            <Card {...cardsInfo[0]}/>
+            <MinimalCard {...cardsInfo[6]}/>
+            <MinimalCard {...cardsInfo[7]}/>
+            <MinimalCard {...cardsInfo[8]}/>
+            <MinimalCard {...cardsInfo[9]}/>
+            <MinimalCard {...cardsInfo[10]}/>
+            <MinimalCard {...cardsInfo[11]}/>
+            <MinimalCard {...cardsInfo[12]}/>
+            <MinimalCard {...cardsInfo[13]}/>
+            <MinimalCard {...cardsInfo[14]}/>
         </div>
 
 
         <h2 className='bodyTitle'>Experience</h2>
-        {LrButtons(2)}
         <div className='cardsContainerNew'>
             {/* <Card name={cardsInfo[4].name} image={PrimEraLogo} description={cardsInfo[4].description} url={cardsInfo[4].url}/> */}
             <Card {...cardsInfo[4]}/>

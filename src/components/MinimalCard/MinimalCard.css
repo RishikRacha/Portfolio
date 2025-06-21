@@ -1,0 +1,5 @@
+.minimalHoverContainer:hover {
+    transform: scale(1.4);
+    box-shadow: 0px 4px 15px rgb(0, 0, 0);
+    cursor: default;
+}

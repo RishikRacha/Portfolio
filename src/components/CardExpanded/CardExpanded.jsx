@@ -12,18 +12,6 @@ function CardExpanded() {
     const reduxCardInfo = useSelector((store) => {return store.cardInfo});
     let dispatch = useDispatch();
 
-    let cardsInfo = [
-            {   name: 'Drum Kit',
-                image: DrumKitPhoto,
-                description: 'This is a simple HTML, CSS and Javascript page '
-            },
-            {
-                name: 'Simon Says',
-                image: SimonSaysPhoto,
-                description: 'This is a fun memory game where you have to follow the random pattern on each level. It was made using simple HTML, CSS, and Javascript.'
-            },
-        ];
-
     const closeClickHandler = () => {
         dispatch(isCardExpandedActionCreator(false));
     }
@@ -39,7 +27,7 @@ function CardExpanded() {
 
 
         <div className='bottomFadeOverlay2' style = {{position: 'relative', top: '-60px',  height: '50px', background: 'linear-gradient(to bottom, rgba(40, 163, 140, 0), rgba(24, 24, 24, 0.974))', width: '100%', zIndex:1010}}>
-            <div className='playBtn'> <Link to={reduxCardInfo.url}>▶Play</Link>   </div>
+            <div className='playBtn'> {reduxCardInfo.urlOut ? <a href={reduxCardInfo.urlOut}>▶Play</a> : <Link to={reduxCardInfo.url}>▶Play</Link> }   </div>
         </div>
 
         <div className='expandedDetailsContainer'>

@@ -4,9 +4,8 @@ import arrow from '../../assets/whiteArrow.png'
 import plus from '../../assets/plus.png'
 import play from '../../assets/play.png'
 
-import myStore from "../../redux/storePortfolio";
 import {isCardExpandedActionCreator, cardInfoActionCreator} from "../../redux/actionCreatorPortfolio";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Card({ name, image, description, url, expandedInfo, urlOut}) {
