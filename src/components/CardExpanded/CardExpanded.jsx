@@ -46,12 +46,10 @@ function CardExpanded() {
                 <h2>{reduxCardInfo.name}</h2>
                 {/* {console.log('THIS IS THE INFO IN THE EXPANDED CARD',reduxCardInfo)} */}
                 <p>{reduxCardInfo.description}</p>
+                {/* <button>hi</button> <button>bye</button> */}
                 <br />
-                <button>hi</button> <button>bye</button>
-                <br />
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, beatae ex fugiat impedit tempore voluptatum a commodi dolore aliquam non, accusamus soluta obcaecati debitis possimus reprehenderit dolorem minus rerum provident.</p>
-                <br />
-                <button>idk</button>
+                <p>{reduxCardInfo.expandedInfo ||  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, beatae ex fugiat impedit tempore voluptatum a commodi dolore aliquam non, accusamus soluta obcaecati debitis possimus reprehenderit dolorem minus rerum provident."}</p>
+                {/* <p>{reduxCardInfo.expandedInfo}</p> */}
             </div>    
             
         </div>

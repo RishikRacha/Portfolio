@@ -4,15 +4,17 @@ import swagImg from '../../assets/coverImg_swag.JPG'
 import intenseImg from '../../assets/coverImg_intense.JPG'
 import paintingImg from '../../assets/coverImg_painting.JPG'
 import vanGogh from '../../assets/logoIcon_vanGogh.png'
+import bannerOne from '../../assets/BannerImages/BannerOne.jpg'
+import bannerLogoOne from '../../assets/BannerLogoIcons/logoOne.png'
 
 
 
 let colorfulImg = 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8fDA%3D'
 let bannersData = [
     {   id:'Witcher3',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/EN_The-Witcher-3_Logo-Black_RGB.svg/1280px-EN_The-Witcher-3_Logo-Black_RGB.svg.png',
-        description: `This is my favourite game, The Witcher 3. I am putting this here just because I don't know what else to put here. Also it makes the website cool hehe`,
-        image: 'https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2015/04/The_Witcher_3_Wild_Hunt_A_lonely_tower_is_it_abandoned.png'
+        logo: bannerLogoOne,
+        description: `Hi! I am Rishik, a software developer based in Hyderabad. I graduated from BITS Pilani in 2024 with a degree in Electronics Engineering. I made this website using React, a pinch of Redux and a Spotify subscription.`,
+        image: bannerOne,
     },
     {   id:'pancha',
         logo: 'https://support.erp.bits-pilani.ac.in/osta/uploads/HorizontalShort_version_crop.png?1727327354',
@@ -29,8 +31,8 @@ let bannersData = [
         id:'painting',
         logo : vanGogh,
         image: paintingImg,
-        description: 'This one is just here because I thought it looked like a cool netflix movie poster, where the main character has an intense gaze towards the camera. This was taken when I was working on a short film in college.'
-    }
+        description: "This one is just here because I just painted it recently and I'm proud of it hehe. First time I tried to create some digital art"
+    }, 
 
 ]
 

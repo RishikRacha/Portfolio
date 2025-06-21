@@ -8,7 +8,7 @@ import myStore from "../../redux/storePortfolio";
 import {isCardExpandedActionCreator, cardInfoActionCreator} from "../../redux/actionCreatorPortfolio";
 import { useSelector, useDispatch } from "react-redux";
 
-function Card({ name, image, description, url }) {
+function Card({ name, image, description, url, expandedInfo }) {
     const dispatch = useDispatch();
 
     function handleHoverStart(e) {
@@ -23,7 +23,7 @@ function Card({ name, image, description, url }) {
     function clickHandler() {
         dispatch(isCardExpandedActionCreator(true));
         console.log("clicked");
-        dispatch(cardInfoActionCreator({ name, description, image, url }));
+        dispatch(cardInfoActionCreator({ name, description, image, url, expandedInfo }));
     }
 
 
@@ -36,14 +36,20 @@ function Card({ name, image, description, url }) {
                 <div>
                     {/* <button onClick={clickHandler} className="cardinfobtn goBtn"  style={{backgroundImage: `url(${arrow})`}} ></button> */}
                     <span href={url} > 
-                        <a href={url} rel="noopener noreferrer"> <img className="cardinfobtn goBtn"  src={play} /></a>
-                        <a href={url} target="_blank" rel="noopener noreferrer" onClick={clickHandler}> <img className="cardinfobtn moregoBtn"  src={plus} /></a>
-                        {/* <img onClick={clickHandler} className="cardinfobtn moregoBtn"  src={plus}/> */}
+                        <a href={url} rel="noopener noreferrer"> 
+                            <img className="cardinfobtn goBtn"  src={play} />
+                        </a>
+
+                        <a href={url} target="_blank" rel="noopener noreferrer" onClick={clickHandler}> 
+                            <img className="cardinfobtn moregoBtn"  src={plus} />
+                        </a>
                     </span>
 
                     <img onClick={clickHandler} className="cardinfobtn moreBtn"  src={arrow} />
                 </div>
-                            {description}
+
+                {description}
+
             </div>
         </div>
     );

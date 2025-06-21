@@ -5,11 +5,11 @@ import profileIcon from '../../assets/coverImg_suit.JPG'
 import whiteArrow from '../../assets/whiteArrow.png'
 import phoneIcon from '../../assets/phoneIcon.png'
 
-// const navigate = useNavigate();
 let linkedInIcon = 'https://ytpr.co.ke/wp-content/uploads/2020/06/linkedin-icon-png-transparent-background-8.png';
 let githubIcon = 'https://img.icons8.com/ios11/512/FFFFFF/github.png';
 
 function Nav() {
+  const navigate = useNavigate();
   const [isOpaque, setIsOpaque] = useState(false);
 
   useEffect(() => {
@@ -35,11 +35,12 @@ function Nav() {
   return (
     <div className={`navContainer ${isOpaque ? 'opaque' : ''}`}>
         <div className='left'>
-            <h1 className='title' onClick={scrollToSection}>MERNFLIX</h1>
+            <h1 className='title' onClick={scrollToSection}>PORTFLIX</h1>
             <Link className='navButton' to="/" onClick={() => scrollToSection(11)}>Home</Link>
             <Link className='navButton' to="/#subheading1" >Projects</Link>
             <Link className='navButton' to="/#subheading2">Skills</Link>
-            <Link className='navButton' to="/public/resume">Resume/CV</Link>
+            <Link className='navButton' to="/#subheading3" onClick={() => scrollToSection(1000)}>Experience</Link>
+            <Link className='navButton' to="https://drive.google.com/file/d/1b_ZxWaDCkHatgYN8gQ7Z3CEzrCUEtfgK/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>
         <div className='right'>
             <div className='profileContainer' >
@@ -55,7 +56,7 @@ function Nav() {
                     <span id='mobileText'>Mobile</span>
                 </div>
 
-                <a className="dropdownButtons" href="https://in.linkedin.com/in/rishikracha" target="_blank">
+                <a className="dropdownButtons" href="https://in.linkedin.com/in/rishikracha" target="_blank" rel="noopener noreferrer">
                     <img className="dropdownIconImg" src={linkedInIcon} alt="icon" />
                     <span>LinkedIn</span>
                 </a>

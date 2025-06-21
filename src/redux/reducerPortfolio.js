@@ -1,7 +1,7 @@
 const initialState = {
     isCardExpanded: false,
     cardInfo: {
-        name:'', description:'', image:'', url:''
+        name:'', description:'', image:'', url:'', expandedInfo:'',
     }
 }
 

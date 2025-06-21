@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './IsSeven.css'
 import TypewriterStatusChain from '../Typewriter/TypewriterStatusChain';
+import Nav from '../../../../components/Nav/Nav';
 
 function IsSeven() {
 
@@ -19,17 +20,19 @@ function IsSeven() {
     }
 
     function handleSumbit(e) {
+        if(isCheckingSeven) return;
         setIsCheckComplete(undefined);      //undefined is registered as false for both ==true and ==false so it removes the isSevenResult div
         setIsCheckingSeven(true);
         setTimeout(()=>{setIsCheckingSeven(false); setIsCheckComplete(checkIsSeven());}, 30000);
     }
 
 
-  return (
+  return (<>
+    <Nav/>
     <div className='isSevenContainer'>
         <h2>7 CHECKER</h2>
         <input type="text" placeholder="Type a number to check if it's 7" onChange={handleState}/>
-        <button className='submitIsSeven' onClick={handleSumbit}>{isSevenInput ? isSevenInput : 'Check'}</button>
+        <button className='submitIsSeven' onClick={handleSumbit}>{isCheckingSeven ? 'CHECKING...' : 'Check'}</button>
 
         {isCheckingSeven  &&  <TypewriterStatusChain />}
         <div className='isSevenResult'>
@@ -38,7 +41,7 @@ function IsSeven() {
         </div>
 
     </div>
-  )
+  </>)
 }
 
 export default IsSeven

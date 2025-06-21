@@ -10,6 +10,8 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import Resume from './components/Resume/Resume'
 import ScrollHandler from './components/ScrollHandler/ScrollHandler'
 import PageEnd from './pages/Games/components/PageEnd/PageEnd'
+import IsSeven from './pages/Games/components/IsSeven/IsSeven'
+import FeedTheGuy from './pages/Games/components/FeedTheGuy/FeedTheGuy'
 
 
 function App() {
@@ -28,10 +30,10 @@ function App() {
         <CardHorizontal />
         {isCardClicked && <CardExpanded/>}
         <PageEnd />
-
         </>}/>
-    <Route path='/public/resume' element={<Resume />}/>
-    
+      <Route path='/public/resume' element={<Resume />}/>
+      <Route path='/game/isSeven' element={<IsSeven />}/>
+      <Route path='/game/FeedTheGuy' element={<FeedTheGuy />}/>
     </Routes>
     </>
   )
