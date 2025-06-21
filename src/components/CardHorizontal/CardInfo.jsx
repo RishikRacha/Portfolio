@@ -10,7 +10,7 @@ export default [
         name: "Drum Kit",
         image: DrumKitPhoto,
         description: <p>This is a simple HTML, CSS and Javascript page</p>,
-        url: "/Portfolio/drumkit/index.html",
+        urlOut: "/Portfolio/drumkit/index.html",
     },
     {
         name: "Simon Says",
@@ -21,13 +21,13 @@ export default [
                 each level.
             </span>
         ),
-        url: "/Portfolio/simonGame/simonGame.html",
+        urlOut: "/Portfolio/simonGame/simonGame.html",
     },
     {
         name: "Is it 7?",
         image: IsSevenCard,
         description: <p>Check if something is 7 or not</p>,
-        url: "/Portfolio/game/isSeven",
+        url: "/game/isSeven",
     },
     {
         name: "Feed The Guy",
@@ -37,7 +37,7 @@ export default [
                 Feed the guy... and keep him healthy perhaps? Your choice though, I don't wanna impose
             </span>
         ),
-        url: "/Portfolio/game/FeedTheGuy",
+        url: "/game/FeedTheGuy",
     },
     {
         name: "Work Experience",

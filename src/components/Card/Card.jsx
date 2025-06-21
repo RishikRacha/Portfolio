@@ -9,7 +9,7 @@ import {isCardExpandedActionCreator, cardInfoActionCreator} from "../../redux/ac
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-function Card({ name, image, description, url, expandedInfo }) {
+function Card({ name, image, description, url, expandedInfo, urlOut}) {
     const dispatch = useDispatch();
 
     function handleHoverStart(e) {
@@ -24,7 +24,7 @@ function Card({ name, image, description, url, expandedInfo }) {
     function clickHandler() {
         dispatch(isCardExpandedActionCreator(true));
         console.log("clicked");
-        dispatch(cardInfoActionCreator({ name, description, image, url, expandedInfo }));
+        dispatch(cardInfoActionCreator({ name, description, image, url, expandedInfo, urlOut }));
     }
 
 
@@ -36,7 +36,18 @@ function Card({ name, image, description, url, expandedInfo }) {
             <div className="cardText">
                 <div>
                     {/* <button onClick={clickHandler} className="cardinfobtn goBtn"  style={{backgroundImage: `url(${arrow})`}} ></button> */}
-                    <span href={url} > 
+                    {urlOut ? //uses anchor tag if there is a urlOut (which i have for the other html pages in public folder and Link for react routing)
+                    <span > 
+                        <a href={urlOut} rel="noopener noreferrer"> 
+                            <img className="cardinfobtn goBtn"  src={play} />
+                        </a>
+
+                        <a href={urlOut} target="_blank" rel="noopener noreferrer" onClick={clickHandler}> 
+                            <img className="cardinfobtn moregoBtn"  src={plus} />
+                        </a>        
+                    </span> 
+                    :
+                    <span>
                         <Link to={url} rel="noopener noreferrer"> 
                             <img className="cardinfobtn goBtn"  src={play} />
                         </Link>
@@ -44,7 +55,7 @@ function Card({ name, image, description, url, expandedInfo }) {
                         <Link to={url} target="_blank" rel="noopener noreferrer" onClick={clickHandler}> 
                             <img className="cardinfobtn moregoBtn"  src={plus} />
                         </Link>
-                    </span>
+                    </span>}        
 
                     <img onClick={clickHandler} className="cardinfobtn moreBtn"  src={arrow} />
                 </div>

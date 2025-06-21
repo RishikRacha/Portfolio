@@ -15,27 +15,28 @@ import FeedTheGuy from './pages/Games/components/FeedTheGuy/FeedTheGuy'
 
 
 function App() {
-  // const [isCardClicked, setIsCardClicked] = useState(true);
-  const isCardClicked = useSelector(store => {return store.isCardExpanded})
-  const navigate = useNavigate();
+    // const [isCardClicked, setIsCardClicked] = useState(true);
+    const isCardClicked = useSelector(store => {return store.isCardExpanded})
+    const navigate = useNavigate();
 
 
-  return (
+return (
     <>
     <ScrollHandler/>
     <Routes>
-      <Route path='*' element={<>
-        <Nav />
-        <Banner />
-        <CardHorizontal />
-        {isCardClicked && <CardExpanded/>}
-        <PageEnd />
+        <Route path='*' element={<>
+            <Nav />
+            <Banner />
+            <CardHorizontal />
+            {isCardClicked && <CardExpanded/>}
+            <PageEnd />
         </>}/>
-      <Route path='/Portfolio/game/isSeven' element={<IsSeven />}/>
-      <Route path='/Portfolio/game/FeedTheGuy' element={<FeedTheGuy />}/>
+        <Route path='/game/isSeven' element={<IsSeven />}/>
+        <Route path='/game/FeedTheGuy' element={<FeedTheGuy />}/>
+
     </Routes>
     </>
-  )
+)
 }
 
 export default App
