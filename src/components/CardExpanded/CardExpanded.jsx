@@ -23,7 +23,7 @@ function CardExpanded() {
     <div className='expandedCardContainer' >
         <div className='closeDiv' ><button className='closeCardBtn' onClick={closeClickHandler}></button></div>
 
-        <img src={reduxCardInfo.image} alt="logo of DrunKit" className="expandedImage"/>
+        <img src={reduxCardInfo.image} alt={reduxCardInfo.name + " poster"} className="expandedImage"/>
 
 
         <div className='bottomFadeOverlay2' style = {{position: 'relative', top: '-60px',  height: '50px', background: 'linear-gradient(to bottom, rgba(40, 163, 140, 0), rgba(24, 24, 24, 0.974))', width: '100%', zIndex:1010}}>

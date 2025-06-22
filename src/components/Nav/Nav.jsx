@@ -40,7 +40,7 @@ function Nav() {
             <Link className='navButton' to="/#subheading1" >Projects</Link>
             <Link className='navButton' to="/#subheading2">Skills</Link>
             <Link className='navButton' to="/#subheading3">Experience</Link>
-            <Link className='navButton' to="https://drive.google.com/file/d/1s2R8NOCCLffjn080OCKmI63l8MacUvbv/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
+            <Link className='navButton' to="https://drive.google.com/file/d/182z8aV2JoByVJPGYE8U9kcPZ9ik2UZ_L/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>
         <div className='right'>
             <div className='profileContainer' >
