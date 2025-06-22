@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./PageEnd.css";
+import ResumePrompt from "../../../../components/Resume/ResumePrompt";
 
 function PageEnd() {
     const noBtnRef = useRef(null);
     const pageEndRef = useRef(null);
-
+    const [resumePromtStatus, setResumePromptStatus] = useState(false);
 
     const handleMovement = () => {
         const noBtn = noBtnRef.current;
@@ -27,8 +28,14 @@ function PageEnd() {
         noBtn.style.top = `${randomY}px`;
     };
 
+    function handleYesReview () {
+        setResumePromptStatus(true);
+    }
+
     return (
         <div className="pageEndContainer" ref={pageEndRef}>
+            {/* {resumePromtStatus && <ResumePrompt promptStatus={resumePromtStatus} />} */}
+            <ResumePrompt promptStatus={resumePromtStatus} handleClose={()=>{setResumePromptStatus(false)}}/>
             <h3>
                 Did you like my page? Click YES if you did, and give a poor dev
                 a ray of hope :P
@@ -37,7 +44,7 @@ function PageEnd() {
                 and NO if you don't. That's fine too ig, I value honest feedback
             </h3>
             <div className="feedbackBtnContainer">
-                <button className="yesReviewBtn">YES</button>
+                <button className="yesReviewBtn" onClick={handleYesReview}>YES</button>
                 <button
                     id="noReviewBtn"
                     ref={noBtnRef}

@@ -19,13 +19,7 @@ let bannersData = [
     {   id:'pancha',
         logo: 'https://support.erp.bits-pilani.ac.in/osta/uploads/HorizontalShort_version_crop.png?1727327354',
         image: swagImg,
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus fugit sunt, iste autem facilis veniam vero possimus veritatis distinctio in expedita fugiat voluptatibus ex"
-    },
-    {
-        id:'poster',
-        logo : 'https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/2395/1707195422395-t',
-        image: intenseImg,
-        description: 'This one is just here because I thought it looked like a cool netflix movie poster, where the main character has an intense gaze towards the camera. This was taken when I was working on a short film in college.'
+        description: "Other than that, I am also a passionate Video/Film Editor, who occasionally dabbles in Photography and Cinematography. I'm also into graphic design."
     },
     {
         id:'painting',

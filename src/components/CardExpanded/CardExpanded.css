@@ -9,7 +9,7 @@
     min-width: 550px;
 
     max-height: 100vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 
     border-radius: 12px;
 }
@@ -30,6 +30,8 @@
     align-items: center;
     position: relative;
     /* z-index: 1009; */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 .expandedDetailsContainer {
@@ -37,10 +39,28 @@
     position: relative;
     background-color: rgba(24, 24, 24, 0.974);
     top: -60px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .expandedDetails{
     padding: 0 40px;
+}
+
+.expandedDetails a {
+    color: antiquewhite;
+    padding: 18px 38px;
+    background-color: rgb(30, 30, 30);
+    border: 2px solid rgb(30, 30, 30);
+
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.expandedDetails a:hover {
+    color: rgb(255, 214, 214);
+    border: 2px solid rgba(255, 228, 228, 0.774);
+    
 }
 
 .closeCardBtn {
@@ -75,7 +95,6 @@
 .playBtn {
     position: absolute;
     z-index: 1;
-    width: 200px;
 }
 .playBtn a {
     background: rgb(245, 245, 245);

@@ -15,8 +15,6 @@ function IsSeven() {
 
     function checkIsSeven() {
         return (isSevenInput == 'seven' || isSevenInput == 7);
-        console.log(isSevenInput);
-        
     }
 
     function handleSumbit(e) {
@@ -31,7 +29,7 @@ function IsSeven() {
     <Nav/>
     <div className='isSevenContainer'>
         <h2>7 CHECKER</h2>
-        <input type="text" placeholder="Type a number to check if it's 7" onChange={handleState}/>
+        <input type="text" placeholder="Type something to check if it's 7" onChange={handleState}/>
         <button className='submitIsSeven' onClick={handleSumbit}>{isCheckingSeven ? 'CHECKING...' : 'Check'}</button>
 
         {isCheckingSeven  &&  <TypewriterStatusChain />}

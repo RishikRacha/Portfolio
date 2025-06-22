@@ -6,7 +6,6 @@ import IsSevenCard from "../../assets/CardsInfo/IsSevenCard.jpg";
 import FeedTheManCard from "../../assets/CardsInfo/FeedTheManCard.jpg";
 
 
-
 export default [
     {
         name: "Drum Kit",
@@ -19,8 +18,7 @@ export default [
         image: SimonSaysPhoto,
         description: (
             <span>
-                A fun memory game where you have to follow the random pattern on
-                each level.
+                A fun memory game where you have to follow the random pattern on each level.
             </span>
         ),
         urlOut: "/Portfolio/simonGame/simonGame.html",
@@ -30,16 +28,24 @@ export default [
         image: IsSevenCard,
         description: <p>Check if something is 7 or not</p>,
         url: "/game/isSeven",
+        expandedInfo: <div>
+            <p>This component was also created for this portfolio app. It uses React to take the user input, and an npm package for the typewriter effect. At the end of execution of the typewriter function, it finally checks the user inputted value to check if its 7 or seven (case insensitve)"</p>
+            <br />
+            <a href="https://github.com/RishikRacha/Portfolio/tree/3c57bc3c7bdfbea39bed2077794f267ced82882d/src/pages/Games/components/IsSeven" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <br /> <br />
+            </div>,
     },
     {
         name: "Feed The Guy",
         image: FeedTheManCard,
-        description: (
-            <span>
-                Feed the guy... and keep him healthy perhaps? Your choice though, I don't wanna impose
-            </span>
-        ),
+        description: <span>Feed the guy... and keep him healthy perhaps? Your choice though, I don't wanna impose</span>,
         url: "/game/FeedTheGuy",
+        expandedInfo:<div>
+            <p>I created this game as a component of this portfolio app itself. It uses React with simple state management to achieve the intended functions. The guy dies if you feed him too much or make him exercise while starving. </p>
+            <br />
+            <a href="https://github.com/RishikRacha/Portfolio/tree/3c57bc3c7bdfbea39bed2077794f267ced82882d/src/pages/Games/components/FeedTheGuy" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <br /> <br />
+        </div>,
     },
     {
         name: "Work Experience",

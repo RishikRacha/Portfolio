@@ -52,7 +52,7 @@ function FeedTheGuy() {
 
     function guyAlert(message) {
         let timeout = 1500;
-        if(hazards > 2) {
+        if(hazards >= 2) {
             message ='Guy is dead. You are responsible. Now live with blood on your hands FOREVER... or just wait for the new guy';
             energyLevel==1 ? setFatLevel(0) : setFatLevel(9);
             timeout = 6000;
