@@ -53,14 +53,14 @@ function CardHorizontal() {
             <Card {...cardsInfo[1]}/>
             <Card {...cardsInfo[2]} />
             <Card {...cardsInfo[3]} />
-            <Card {...cardsInfo[0]} />
-            <Card {...cardsInfo[1]} />
+            {/* <Card {...cardsInfo[0]} /> */}
+            {/* <Card {...cardsInfo[1]} /> */}
             </div>
        
 
         <h2 className='bodyTitle'>Programming skills</h2>
         {LrButtons(1)}
-        <div className='cardsContainerNew'>
+        <div className='cardsContainerNew minimalCardsContainer'>
             <MinimalCard {...cardsInfo[6]}/>
             <MinimalCard {...cardsInfo[7]}/>
             <MinimalCard {...cardsInfo[8]}/>

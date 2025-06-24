@@ -49,6 +49,7 @@ function PageEnd() {
                     id="noReviewBtn"
                     ref={noBtnRef}
                     onMouseEnter={handleMovement}
+                    onClick={handleMovement}
                 >
                     no
                 </button>

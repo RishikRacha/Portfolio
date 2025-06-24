@@ -63,3 +63,27 @@
 #noReviewBtn {
     cursor:none;
 }
+
+@media (max-width: 768px) {
+    .pageEndContainer{
+        margin: 5vw;
+    }
+    .pageEndContainer h3 {
+        font-size: 1rem;
+    }
+    /* .yesReviewBtn {
+        transform: scale(0.7);
+    }
+    #noReviewBtn {
+        transform: scale(0.7);
+    } */
+     .feedbackBtnContainer button {
+        padding: 5px;
+     }
+}
+
+@media (max-width: 412px) {
+    .pageEndContainer h3{
+        font-size: 0.8rem;
+    }
+}

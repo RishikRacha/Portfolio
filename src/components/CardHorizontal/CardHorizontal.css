@@ -6,6 +6,7 @@
     /* height: 100vh; */
     min-height: 700px;
     padding: 0 60px;
+    overflow: visible;  
 }
 
 .cardsContainerNew {
@@ -99,4 +100,24 @@
         rgba(20, 20, 20, 0.3),
         rgba(20, 20, 20, 1)
     );
+}
+
+
+@media (max-width: 768px) {
+    .leftrightbtns {
+        display: none;
+    }
+    .cardsContainerNew {
+        overflow: auto; 
+    }
+    .bodyContainerNew {
+        padding: 0;
+    }
+    .cardsContainerNew {
+        padding: 5px 5vw;
+    }
+    .bodyTitle {
+        padding: 0 5vw;
+        font-size: larger;
+    }
 }

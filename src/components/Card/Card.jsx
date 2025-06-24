@@ -59,7 +59,7 @@ function Card({ name, image, description, url, expandedInfo, urlOut}) {
                     <img onClick={clickHandler} className="cardinfobtn moreBtn"  src={arrow} />
                 </div>
 
-                {description}
+                <span id="hoverDescription">{description}</span>
 
             </div>
         </div>

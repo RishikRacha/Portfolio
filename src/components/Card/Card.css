@@ -66,3 +66,72 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+@media (max-width: 768px) {
+    .cardContainer{
+        width: 20vw;
+    }
+    .moregoBtn {
+        display: none;
+    }
+    .cardinfobtn {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cardText{
+        font-size: smaller;
+        height:fit-content;
+        padding: 0 10px;
+        position: relative;
+    }
+    .cardText div {
+        height: 20px;
+    }
+    .hoverContainer:hover {
+        height: 116px;
+        transform: scale(1.2);
+        transform-origin: 50% 0%;
+        z-index: 1000;
+    }
+    #hoverDescription {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .cardContainer{
+        width: 25vw;
+    }
+}
+@media (max-width: 512px) {
+    .cardContainer{
+        width: 30vw;
+    }
+    .hoverContainer:hover{
+        height: 32px;
+    }
+    .cardText div{
+        position: absolute;
+        left: 0;
+        top: -40px;
+        width: 100%;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 412px) {
+    .cardContainer{
+        width: 45vw;
+        transition: all 0.2x ease;
+    }
+    .cardinfobtn {
+        transform: scale(1.5);
+        border: 0;
+    }
+    .hoverContainer:hover {
+        transform: scale(1.2);
+        transform-origin: 50% 50%;
+        z-index: 1000;
+    }
+}

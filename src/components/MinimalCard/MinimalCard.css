@@ -7,3 +7,12 @@
 .minimalHoverContainer img{
     border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+    .minimalHoverContainer:hover {
+        height: 64px;
+        transform: scale(1.2);
+        transform-origin: 50% 0%;
+        z-index: 1000;
+    }
+}

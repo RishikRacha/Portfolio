@@ -84,3 +84,12 @@
 
 }
 
+@media (max-width: 768px) {
+    .bannerImg{
+        height: 700px;
+        overflow-y: hidden;
+    }
+    .bannerContainer {
+        overflow-y: hidden;
+    }
+}

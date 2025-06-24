@@ -1,18 +1,20 @@
+
 .navContainer {
     background: linear-gradient(to bottom, rgb(20,20,20,0.5), rgba(26, 26, 26, 0));
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 80px;
     position: fixed;
     font-size: large;
     transition: background 0.9s ease, height 0.3s ease, font-size 0.5s ease ;
-  z-index: 1000;
+    z-index: 1000;
 
 }
 
 .navContainer.opaque {
-    background: linear-gradient(to bottom, rgb(20,20,20), rgba(26,26,26,1));
+    /* background: linear-gradient(to bottom, rgb(20,20,20), rgba(26,26,26,1)); */
     background: black;
     height: 60px;
     font-size: medium;
@@ -21,7 +23,8 @@
 
 .title {
     color: red;
-    margin: 60px;
+    /* margin: 60px; */
+    margin: 3%;
     letter-spacing: -6%;
     text-shadow: 1px 3px 2px darkred;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -33,12 +36,16 @@
 }
 
 .opaque .title {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
+}
+.menuToggle {
+    display: none;
 }
 
 .left {
-    display: flex;
+    display: flex; 
     align-items: center;
+    justify-content: space-evenly;
 }
 .right {
     margin-left: auto;
@@ -187,4 +194,157 @@
     height: 30px;
     border-radius: 15%;
     object-fit: contain;
+}
+
+
+
+@media (max-width: 768px) {
+    .navContainer {
+        height: 45px;
+        font-size: medium;
+    }
+    .navContainer.opaque {
+        height: 45px;
+        /* background: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0.298)); */
+        background: rgba(0, 0, 0, 0.75);
+    }
+
+    .left {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .navButton {
+        padding: 5px;
+        /* font-size: 0.8rem; */
+    }
+
+    .title {
+        margin: 15px;
+        font-size: 1.8rem;
+    }
+    .opaque .title {
+        font-size: 0;
+        margin: 0;
+    }
+
+    .profileContainer {
+        padding-right: 10px;
+        /* padding-left: 10px; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .profileIconImg {
+        width: 30px;
+        height: 30px;
+    }
+
+    #profileIconArrow {
+        width: 20px;
+        height: 15px;
+    }
+
+    #dropdownMenu {
+        width: 140px;
+        padding: 8px 10px;
+        margin-right: 15px;
+    }
+
+    .dropdownButtons {
+        height: 50px;
+    }
+
+    .dropdownIconImg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 512px) {
+    .navContainer.opaque{
+        background: #000;
+    }
+
+    .menuToggle {
+        display: unset;
+        z-index: 100;
+        background: #00000000;
+        padding: 0px 30px;
+        padding-right: 0;
+        font-size: xx-large;
+        height: 100%;
+        color: white;
+        border: unset;
+        transition: transform 0.3s ease;
+    }
+    .menuToggle:hover {
+        border: unset;
+    }
+    .menuToggle:active {
+        color: rgba(255, 0, 0, 0.9);
+        transform: scale(0.9);
+    }
+    .left{
+        flex-direction: column;
+        height: 100vh;
+        width: 70vw;
+        position: fixed;
+        align-self:flex-start;
+
+        align-items:flex-start;
+        justify-content: flex-start;
+        background-color: rgba(0, 0, 0, 0.912);
+
+
+        transform: translateX(-100%);
+        transition: transform 0.2s ease;
+        padding: 80px 0px;
+
+        font-size: larger;
+    }
+    .left.navOpen {
+        /* left: 0; */
+        transform: translateX(0);
+
+    }
+    .navOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(8, 8, 8, 0.371);
+        opacity: 100%;
+        width: 100%;
+    }
+    .navOverlay.navOpen {
+        opacity: 100%;
+        transform: translateX(100%);
+        transition: all 0.2s ease;
+    }
+
+    .navButton {
+        padding: 20px 50px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+      
+
+    .title {
+        font-size: xx-large;
+        align-self: center;
+        justify-self: center;
+    }
+    .opaque .title {
+        font-size: 2.2rem;
+    }
+
+    .right {
+        margin: 0px;
+    }
+
+    #dropdownMenu {
+        margin-right: 20px;
+        box-shadow: none;
+    }
 }
