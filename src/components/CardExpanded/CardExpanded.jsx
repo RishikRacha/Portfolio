@@ -27,7 +27,7 @@ function CardExpanded() {
 
 
         <div className='bottomFadeOverlay2' style = {{position: 'relative', top: '-60px',  height: '50px', background: 'linear-gradient(to bottom, rgba(40, 163, 140, 0), rgba(24, 24, 24, 0.974))', width: '100%', zIndex:1010}}>
-            <div className='playBtn'> {reduxCardInfo.urlOut ? <a href={reduxCardInfo.urlOut}>▶ Play</a> : <Link to={reduxCardInfo.url}>▶ Play</Link> }   </div>
+            <div className='playBtn outsidePlayBtn'> {reduxCardInfo.urlOut ? <a href={reduxCardInfo.urlOut}>▶ Play</a> : <Link to={reduxCardInfo.url}>▶ Play</Link> }   </div>
         </div>
 
         <div className='expandedDetailsContainer'>
@@ -35,6 +35,7 @@ function CardExpanded() {
                 <h2>{reduxCardInfo.name}</h2>
                 {/* {console.log('THIS IS THE INFO IN THE EXPANDED CARD',reduxCardInfo)} */}
                 <h4>{reduxCardInfo.description}</h4>
+                <div className='playBtn insidePlayBtn'> {reduxCardInfo.urlOut ? <a href={reduxCardInfo.urlOut}>▶ Play</a> : <Link to={reduxCardInfo.url}>▶ Play</Link> }   </div>
                 {/* <button>hi</button> <button>bye</button> */}
                 <br />
                 {reduxCardInfo.expandedInfo ||  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, beatae ex fugiat impedit tempore voluptatum a commodi dolore aliquam non, accusamus soluta obcaecati debitis possimus reprehenderit dolorem minus rerum provident.</p>}

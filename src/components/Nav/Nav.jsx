@@ -40,13 +40,13 @@ function Nav() {
   return (
     <div className={`navContainer ${isOpaque ? 'opaque' : ''} `}>
         <button className='menuToggle' onClick={toggleNav}>☰</button>
-        <h1 className='title' onClick={scrollToSection}>PORTFLIX</h1>
+        <Link to='/'><h1 className='title' onClick={scrollToSection}>PORTFLIX</h1></Link>
         <div className={`left ${navOpen ? 'navOpen' : ''}`} >
         <div className={`navOverlay ${navOpen ? 'navOpen' : ''}`}  onClick={toggleNav}></div>
-            <Link className='navButton' to="/" onClick={() => scrollToSection(11)}>Home</Link>
-            <Link className='navButton' to="/#subheading1" >Projects</Link>
-            <Link className='navButton' to="/#subheading2">Skills</Link>
-            <Link className='navButton' to="/#subheading3">Experience</Link>
+            <Link className='navButton' to="/" onClick={() => {scrollToSection(11); toggleNav();}}>Home</Link>
+            <Link className='navButton' to="/#subheading1"  onClick={toggleNav}>Projects</Link>
+            <Link className='navButton' to="/#subheading2" onClick={toggleNav}>Skills</Link>
+            <Link className='navButton' to="/#subheading3" onClick={toggleNav}>Experience</Link>
             <Link className='navButton' to="https://drive.google.com/file/d/182z8aV2JoByVJPGYE8U9kcPZ9ik2UZ_L/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>
         <div className='right'>

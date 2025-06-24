@@ -60,7 +60,6 @@
 .expandedDetails a:hover {
     color: rgb(255, 214, 214);
     border: 2px solid rgba(255, 228, 228, 0.774);
-    
 }
 
 .closeCardBtn {
@@ -93,7 +92,7 @@
 }
 
 .playBtn {
-    position: absolute;
+    position:absolute;
     z-index: 1;
 }
 .playBtn a {
@@ -111,7 +110,38 @@
     background: rgb(225, 225, 225);
 }
 
-
+.insidePlayBtn {
+    display: none;
+}
 ::-webkit-scrollbar {
     display: none;
+}
+
+@media (max-width: 600px) {
+    .expandedCardContainer {
+        min-width: unset;
+        width: 90vw;
+        margin: auto;
+    }
+    .playBtn {
+        position: sticky;
+    }
+    .playBtn a{
+        margin: 0px;
+        padding: 8px 32px;
+    }
+    .outsidePlayBtn{
+        display: none;
+    }
+    .insidePlayBtn{
+        display: block;
+    }
+    .insidePlayBtn a:hover{
+        color: black;
+    }
+
+    .expandedDetails {
+        padding: 0;
+        top: -80px;
+    }
 }

@@ -6,6 +6,8 @@ import paintingImg from '../../assets/coverImg_painting.JPG'
 import vanGogh from '../../assets/logoIcon_vanGogh.png'
 import bannerOne from '../../assets/BannerImages/BannerOne.jpg'
 import bannerLogoOne from '../../assets/BannerLogoIcons/logoOne.png'
+import bannerLogoTwoo from '../../assets/BannerLogoIcons/BITS_Horizontal.png'
+import bannerLogoTwo from '../../assets/BannerLogoIcons/BannerLogoTwo.png'
 
 
 
@@ -17,7 +19,8 @@ let bannersData = [
         image: bannerOne,
     },
     {   id:'pancha',
-        logo: 'https://support.erp.bits-pilani.ac.in/osta/uploads/HorizontalShort_version_crop.png?1727327354',
+        // logo: 'https://support.erp.bits-pilani.ac.in/osta/uploads/HorizontalShort_version_crop.png?1727327354',
+        logo: bannerLogoTwo,
         image: swagImg,
         description: "Other than that, I am also a passionate Video/Film Editor, who occasionally dabbles in Photography and Cinematography. I'm also into graphic design."
     },
@@ -31,6 +34,13 @@ let bannersData = [
 ]
 
 
+// let stylesCustom = {
+//     zIndex: bannerCurrent.id == 'painting' ? 1000 : 1,
+//     '@media (max-width: 412px)': {
+//         objectPosition: bannerCurrent.id === 'pancha' ? 'center' : 'right',
+//     }
+// }
+
 function Banner() {
   const [bannerItem, setBannerItem] = useState(bannersData[0]);
 
@@ -41,7 +51,7 @@ function Banner() {
         {
             bannersData.map((bannerCurrent,index) => (
                 <div key={index} className='bannerContainer'>
-                    <img className='bannerImg' src={bannerCurrent.image} alt="" style={{zIndex: bannerCurrent.id == 'painting' ? 1000 : 1}}/>
+                    <img className='bannerImg' src={bannerCurrent.image} alt="" style={{zIndex: bannerCurrent.id == 'painting' ? 1000 : 1, objectPosition: bannerCurrent.id === 'pancha' ? 'center' : bannerCurrent.id == 'painting' ? 'left' : '', }}/>
 
                     <div className='bannerTitleContainer'>
                         <img src={bannerCurrent.logo} className="bannerLogo" alt="logo" />

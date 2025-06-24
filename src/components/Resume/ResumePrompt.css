@@ -80,3 +80,9 @@
     transform: unset;
     transition: unset;
 }
+
+@media (max-width: 768px) {
+    .promptContainer {
+        width: 60vw;
+    }
+}

@@ -88,8 +88,41 @@
     .bannerImg{
         height: 700px;
         overflow-y: hidden;
+        object-position: calc(100% + 50px) top;
     }
-    .bannerContainer {
-        overflow-y: hidden;
+    .bannerText {
+        color: white;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+        font-size: 1rem;
+        display: unset;
+    }
+}
+
+@media (max-width: 512px) {
+    .bannerTitleContainer{
+        width: 100%;
+        margin-top: 55px;
+        padding: 0px;
+
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .bannerLogo {
+        width: 40vw;
+        height: 100px;
+        /* background: radial-gradient(circle, rgba(255, 255, 255, 0.391), rgba(255, 255, 255, 0) 80%); */
+
+    }
+    .overlay {
+        display: none;
+    }
+    .bannerText {
+        /* z-index: 1000; */
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        padding: 20px;
+        text-shadow: 2px 2px 1px rgb(0, 0, 0);
+        font-size: 0.9rem;
+
     }
 }

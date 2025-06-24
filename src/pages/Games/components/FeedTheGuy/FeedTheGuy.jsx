@@ -19,7 +19,7 @@ import Nav from "../../../../components/Nav/Nav";
 function FeedTheGuy() {
     const [fatLevel, setFatLevel] = useState(4);
     const [energyLevel, setEnergyLevel] = useState(4);
-    const [alertMessage, setAlertMessage] = useState('');
+    const [alertMessage, setAlertMessage] = useState("");
     const [hazards, setHazards] = useState(0);
 
     function exercise() {
@@ -72,7 +72,7 @@ function FeedTheGuy() {
     <Nav />
     <div className="feedTheGuyContainer">
 
-        <h1>FEED THE GUY <span>(pls don't kill him)</span></h1>
+        <h1>FEED THE GUY<span>(pls don't kill him)</span></h1>
         <div className="guyContainer">
             {/* <div className="mouth" onClick={_seeLevels}></div> */}
             <img src={[fat0, fat1, fat2, fat3, fat4, fat5, fat6, fat7, fat8, fat9][Math.floor(fatLevel ) ]} alt="a guy who might be fat or fit" />
