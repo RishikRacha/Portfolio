@@ -29,7 +29,7 @@ export default [
         description: <p>Check if something is 7 or not</p>,
         url: "/game/isSeven",
         expandedInfo: <div>
-            <p>This game was created as a component of this portfolio app. It uses React to take the user input, and an npm package for the typewriter effect. At the end of execution of the typewriter function, it finally checks the user inputted value to check if its 7 or seven (case insensitve)"</p>
+            <p>This game was created as a component of this portfolio app. It uses React to take the user input, and an npm package for the typewriter effect. At the end of execution of the typewriter function, it finally checks the user inputted value to check if its 7 or  even seven (cheeky ik)</p>
             <br />
             <a href="https://github.com/RishikRacha/Portfolio/tree/3c57bc3c7bdfbea39bed2077794f267ced82882d/src/pages/Games/components/IsSeven" target="_blank" rel="noopener noreferrer">GitHub</a>
             <br /> <br />
