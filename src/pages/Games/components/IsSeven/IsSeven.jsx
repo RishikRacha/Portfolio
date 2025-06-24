@@ -21,7 +21,7 @@ function IsSeven() {
         if(isCheckingSeven) return;
         setIsCheckComplete(undefined);      //undefined is registered as false for both ==true and ==false so it removes the isSevenResult div
         setIsCheckingSeven(true);
-        setTimeout(()=>{setIsCheckingSeven(false); setIsCheckComplete(checkIsSeven());}, 30000);
+        setTimeout(()=>{setIsCheckingSeven(false); setIsCheckComplete(checkIsSeven());}, 21000);
     }
 
 
