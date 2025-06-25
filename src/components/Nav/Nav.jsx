@@ -39,10 +39,13 @@ function Nav() {
   
   return (
     <div className={`navContainer ${isOpaque ? 'opaque' : ''} `}>
+
         <button className='menuToggle' onClick={toggleNav}>☰</button>
-        <Link to='/'><h1 className='title' onClick={scrollToSection}>PORTFLIX</h1></Link>
+
+        <h1 className='title' onClick={() => {scrollToSection; navigate('/home')}}>PORTFLIX</h1>
+
         <div className={`left ${navOpen ? 'navOpen' : ''}`} >
-        <div className={`navOverlay ${navOpen ? 'navOpen' : ''}`}  onClick={toggleNav}></div>
+            <div className={`navOverlay ${navOpen ? 'navOpen' : ''}`}  onClick={toggleNav}></div>
             <Link className='navButton' to="/" onClick={() => {scrollToSection(11); toggleNav();}}>Home</Link>
             <Link className='navButton' to="/#subheading1"  onClick={toggleNav}>Projects</Link>
             <Link className='navButton' to="/#subheading2" onClick={toggleNav}>Skills</Link>

@@ -15,7 +15,7 @@ import FeedTheGuy from './pages/Games/components/FeedTheGuy/FeedTheGuy'
 
 
 function App() {
-
+    const navigate = useNavigate();
     const isCardClicked = useSelector(store => {return store.isCardExpanded})
 
 return (

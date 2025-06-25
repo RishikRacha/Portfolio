@@ -34,6 +34,7 @@ function CardHorizontal() {
     }
 
     function LrButtons(i) {
+        if(i<0) return null;
         return (
             <div className='leftrightbtns'>
                 <div className='leftbtn  lrbtn' onClick={() => {goRightHandler(false,i)}}> <img src={arrow}/> </div>
@@ -47,7 +48,7 @@ function CardHorizontal() {
 
 
         <h2 className='bodyTitle'>Small Games I Made</h2>
-        {LrButtons(0)}
+        {LrButtons(-1)}
         <div className='cardsContainerNew'>
             <Card {...cardsInfo[0]}/>
             <Card {...cardsInfo[1]}/>

@@ -34,7 +34,7 @@ function FeedTheGuy() {
     function eatBurger() {
         if(energyLevel < 8) setEnergyLevel(prev => prev+1);
 
-        if(fatLevel < 8) setFatLevel(prev => prev+0.5) 
+        if(fatLevel < 8) setFatLevel(prev => prev+1) 
         else {guyAlert("I don't think bro should have more junk..."); setHazards(prev => prev+1)}
 
         
@@ -43,7 +43,7 @@ function FeedTheGuy() {
     
 
     function eatSalad() {
-        if(energyLevel < 8) setEnergyLevel(prev => prev+1);
+        if(energyLevel < fatLevel+2) setEnergyLevel(prev => prev+1);
     }
 
     function _seeLevels() {
@@ -99,6 +99,7 @@ function FeedTheGuy() {
                 <h2>Exercise</h2>
             </div>
         </div>
+            {/* <div className="guyAction guyActionExplain"><h2 style={{opacity: '80%', color: 'brown', cursor: 'default'}}>Click/Tap the Icons</h2></div> */}
         
     </div></>
 }
