@@ -9,35 +9,35 @@ let linkedInIcon = 'https://ytpr.co.ke/wp-content/uploads/2020/06/linkedin-icon-
 let githubIcon = 'https://img.icons8.com/ios11/512/FFFFFF/github.png';
 
 function Nav() {
-  const navigate = useNavigate();
-  const [isOpaque, setIsOpaque] = useState(false);
-  const [navOpen, setNavOpen] = useState(false);
+    const navigate = useNavigate();
+    const [isOpaque, setIsOpaque] = useState(false);
+    const [navOpen, setNavOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {setIsOpaque(window.scrollY > 10);}; // make nav opaque after scrolling a lil bit
+    useEffect(() => {
+      const handleScroll = () => {setIsOpaque(window.scrollY > 10);}; // make nav opaque after scrolling a lil bit
 
-    window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
 
-    // Clean up
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      // Clean up
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-  const toggleNav = ()=> {
-    setNavOpen(!navOpen);
-  }
+    const toggleNav = ()=> {
+      setNavOpen(!navOpen);
+    }
 
-  function scrollToSection(y) {             // only to scroll to home and top quickly
-    window.scrollTo({top: y, behavior: 'smooth'})
-  }
+    function scrollToSection(y) {             // only to scroll to home and top quickly
+      window.scrollTo({top: y, behavior: 'smooth'})
+    }
 
-  function phoneClickHandler() {
-    navigator.clipboard.writeText("+91 9676644007");
-    document.getElementById('mobileText').innerHTML = '<p style="color: red; font-size: 12px">Copied to Clipboard</p>';
-    setTimeout(() => document.getElementById('mobileText').innerText = 'Mobile', 500)
-  }
+    function phoneClickHandler() {
+      navigator.clipboard.writeText("+91 9676644007");
+      document.getElementById('mobileText').innerHTML = '<p style="color: red; font-size: 12px">Copied to Clipboard</p>';
+      setTimeout(() => document.getElementById('mobileText').innerText = 'Mobile', 500)
+    }
 
-  
-  return (
+    
+    return (
     <div className={`navContainer ${isOpaque ? 'opaque' : ''} `}>
 
         <button className='menuToggle' onClick={toggleNav}>☰</button>
@@ -52,6 +52,7 @@ function Nav() {
             <Link className='navButton' to="/#subheading3" onClick={toggleNav}>Experience</Link>
             <Link className='navButton' to="https://drive.google.com/file/d/182z8aV2JoByVJPGYE8U9kcPZ9ik2UZ_L/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>
+        
         <div className='right'>
             <div className='profileContainer' >
                 <div className='profileIcon'>
@@ -80,7 +81,7 @@ function Nav() {
             </div>
         </div>
     </div>
-  )
+    )
 }
 
 export default Nav

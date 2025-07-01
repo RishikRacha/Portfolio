@@ -24,6 +24,12 @@ let bannersData = [
         image: swagImg,
         description: "Other than that, I am also a passionate Video/Film Editor, who occasionally dabbles in Photography and Cinematography. I'm also into graphic design."
     },
+    // {
+    //     id: 'intense',
+    //     logo: 'https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/2395/1707195422395-t',
+    //     image: intenseImg,
+    //     description: "This is just here because I thought it looked like a cool netflix poster with an intense protagonist. It was taken when i was making a short film."
+    // },
     {
         id:'painting',
         logo : vanGogh,
@@ -51,8 +57,10 @@ function Banner() {
         {
             bannersData.map((bannerCurrent,index) => (
                 <div key={index} className='bannerContainer'>
+                    {/* main banner image */}
                     <img className='bannerImg' src={bannerCurrent.image} alt="" style={{zIndex: bannerCurrent.id == 'painting' ? 1000 : 1, objectPosition: bannerCurrent.id === 'pancha' ? 'center' : bannerCurrent.id == 'painting' ? 'left' : '', }}/>
 
+                    {/* info of banner */}
                     <div className='bannerTitleContainer'>
                         <img src={bannerCurrent.logo} className="bannerLogo" alt="logo" />
                         <div className='bannerText'>

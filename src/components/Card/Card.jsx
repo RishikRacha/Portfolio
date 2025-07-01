@@ -22,7 +22,6 @@ function Card({ name, image, description, url, expandedInfo, urlOut}) {
 
     function clickHandler() {
         dispatch(isCardExpandedActionCreator(true));
-        console.log("clicked");
         dispatch(cardInfoActionCreator({ name, description, image, url, expandedInfo, urlOut }));
     }
 
