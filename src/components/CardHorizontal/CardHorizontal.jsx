@@ -50,10 +50,10 @@ function CardHorizontal() {
         <h2 className='bodyTitle'>Small Games I Made</h2>
         {LrButtons(-1)}
         <div className='cardsContainerNew'>
-            <Card {...cardsInfo[0]}/>
-            <Card {...cardsInfo[1]}/>
             <Card {...cardsInfo[2]} />
+            <Card {...cardsInfo[1]}/>
             <Card {...cardsInfo[3]} />
+            <Card {...cardsInfo[0]}/>
             {/* <Card {...cardsInfo[0]} /> */}
             {/* <Card {...cardsInfo[1]} /> */}
             </div>
@@ -62,8 +62,6 @@ function CardHorizontal() {
         <h2 className='bodyTitle'>Programming skills</h2>
         {LrButtons(1)}
         <div className='cardsContainerNew minimalCardsContainer'>
-            <MinimalCard {...cardsInfo[6]}/>
-            <MinimalCard {...cardsInfo[7]}/>
             <MinimalCard {...cardsInfo[8]}/>
             <MinimalCard {...cardsInfo[9]}/>
             <MinimalCard {...cardsInfo[10]}/>
@@ -71,15 +69,25 @@ function CardHorizontal() {
             <MinimalCard {...cardsInfo[12]}/>
             <MinimalCard {...cardsInfo[13]}/>
             <MinimalCard {...cardsInfo[14]}/>
+            <MinimalCard {...cardsInfo[15]}/>
+            <MinimalCard {...cardsInfo[16]}/>
+
         </div>
 
+
+        <h2 className='bodyTitle'>Projects</h2>
+        <div className='cardsContainerNew'>
+            <Card {...cardsInfo[4]}/>
+            <Card {...cardsInfo[5]}/>
+        </div>
 
         <h2 className='bodyTitle'>Work Experience</h2>
         <div className='cardsContainerNew'>
             {/* <Card name={cardsInfo[4].name} image={PrimEraLogo} description={cardsInfo[4].description} url={cardsInfo[4].url}/> */}
-            <Card {...cardsInfo[4]}/>
-            <Card {...cardsInfo[5]}/>
+            <Card {...cardsInfo[6]}/>
+            <Card {...cardsInfo[7]}/>
         </div>
+
 
         <h2 className='bodyTitle'>Fin</h2>
     </div>

@@ -29,7 +29,7 @@ function Card({ name, image, description, url, expandedInfo, urlOut}) {
 
     return (
         <div className="cardContainer hoverContainer"onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd}>
-            <img src={image} alt={name} />
+            <img src={image} alt={name} onClick={clickHandler} />
 
             <div className="cardText">
                 <div>

@@ -4,6 +4,8 @@ import SimonSaysPhoto from "../../assets/CardsInfo/SimonSaysCard.jpg";
 import PrimEraLogo from "../../assets/CardsInfo/PrimEraLogo.jpg";
 import IsSevenCard from "../../assets/CardsInfo/IsSevenCard.jpg";
 import FeedTheManCard from "../../assets/CardsInfo/FeedTheManCard.jpg";
+import AmmuseumCard from "../../assets/CardsInfo/AmmuseumCard.jpg";
+import PortfolioCard from "../../assets/CardsInfo/portflix.jpg";
 
 
 export default [
@@ -48,10 +50,34 @@ export default [
         </div>,
     },
     {
+        name: "Freelance Project: Ammuseum",
+        image: AmmuseumCard,
+        description: <h3 style={{ margin: "auto" }}>MERN Stack Project: <br /> Cafe Website</h3>,
+        url: "https://ammuseumwebsite.onrender.com/board-games",
+        expandedInfo: <div>
+            <p>A MERN full stack project, currently hosted on a free test server. This project taught me how to account for real-world problems when building real apps. I have gone through a lot of iterations and my app's architecture gradually evolved for the better as I kept learning from my mistakes and made better choices. <br /><br /> It uses RESTful APIs, React, Redux, and localStorage for quicker loading times. </p>
+            <br />
+            <a href="https://github.com/RishikRacha/AmmuseumWebsite" target="_blank" rel="noopener noreferrer">GitHub</a> <br /> <br />
+        </div>
+
+    },
+    {
+        name: "Portfolio Website",
+        image: PortfolioCard,
+        description: <h3 >React Project</h3>,
+        url: "https://ammuseumwebsite.onrender.com/board-games",
+        expandedInfo: <div>
+            <p>A React + Vite app (this website). This is my portfolio, built from scratch to look like the Netflix website. I had to use Redux for state management, which helped my proficiency in using Redux.</p>
+            <br />
+            <a href="https://github.com/RishikRacha/Portfolio" target="_blank" rel="noopener noreferrer">GitHub</a> <br /> <br />
+        </div>
+
+    },
+    {
         name: "Work Experience",
         image: PrimEraLogo,
         description: (
-            <h3 style={{ margin: 0 }}><b> Cybersecurity Intern, <br /> PrimEra Medical Technologies </b></h3>
+            <h4 style={{ margin: 0 }}><b> Cybersecurity Intern, <br /> PrimEra Medical Technologies </b></h4>
         ),
         url: "https://www.linkedin.com/company/primeramt",
         expandedInfo:
@@ -74,5 +100,5 @@ export default [
     ,{ name: "React", image: "https://miro.medium.com/v2/resize:fit:1200/1*y6C4nSvy2Woe0m7bWEn4BA.png"}
     ,{ name: "MongoDB", image: "https://images.ctfassets.net/23aumh6u8s0i/6wTbGkTM3EBoO6hytvOcXj/d0144f86227382219fd2c8f4f53499c6/illustration"}
     ,{ name: "C#", image: "https://kodigowebstorage.blob.core.windows.net/kodigowebsite/2023/08/csharp.png"}
-    ,{ name: "mySQL", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBn9djlMmqMEnNhETDtAZUaVMxhO5jvldqqA&s"}
+    ,{ name: "mySQL", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBn9djlMmqMEnNhETDtAZUaVMxhO5jvldqqA&s"},
 ];
