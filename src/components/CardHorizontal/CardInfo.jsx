@@ -65,7 +65,7 @@ export default [
         name: "Portfolio Website",
         image: PortfolioCard,
         description: <h3 >React Project</h3>,
-        url: "https://ammuseumwebsite.onrender.com/board-games",
+        url: "",
         expandedInfo: <div>
             <p>A React + Vite app (this website). This is my portfolio, built from scratch to look like the Netflix website. I had to use Redux for state management, which helped my proficiency in using Redux.</p>
             <br />
