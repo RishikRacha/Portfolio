@@ -47,12 +47,13 @@ function Nav() {
         <div className={`left ${navOpen ? 'navOpen' : ''}`} >
             <div className={`navOverlay ${navOpen ? 'navOpen' : ''}`}  onClick={toggleNav}></div>
             <Link className='navButton' to="/" onClick={() => {scrollToSection(11); toggleNav();}}>Home</Link>
-            <Link className='navButton' to="/#subheading1"  onClick={toggleNav}>Projects</Link>
+            <Link className='navButton' to="/#subheading1" onClick={toggleNav}>Games</Link>
             <Link className='navButton' to="/#subheading2" onClick={toggleNav}>Skills</Link>
-            <Link className='navButton' to="/#subheading3" onClick={toggleNav}>Experience</Link>
+            <Link className='navButton' to="/#subheading3"  onClick={toggleNav}>Projects</Link>
+            <Link className='navButton' to="/#subheading4" onClick={toggleNav}>Experience</Link>
             <Link className='navButton' to="https://drive.google.com/file/d/182z8aV2JoByVJPGYE8U9kcPZ9ik2UZ_L/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>
-        
+
         <div className='right'>
             <div className='profileContainer' >
                 <div className='profileIcon'>

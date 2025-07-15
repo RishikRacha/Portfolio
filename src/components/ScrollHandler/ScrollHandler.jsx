@@ -35,6 +35,15 @@ export default function ScrollHandler() {
                     navigate();
             }
         }
+        else if (hash === "#subheading4") {
+            const el = document.getElementsByClassName("bodyTitle")[3];
+            if (el) {
+                const elementTop =
+                    el.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({ top: elementTop - 80, behavior: "smooth" });
+                    navigate();
+            }
+        }
         
     }, [location]);
 
