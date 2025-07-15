@@ -120,8 +120,9 @@
 @media (max-width: 600px) {
     .expandedCardContainer {
         min-width: unset;
-        width: 90vw;
+        width: 95vw;
         margin: auto;
+        height: 80vh;
     }
     .playBtn {
         position: sticky;
