@@ -1,12 +1,51 @@
-# React + Vite
+# Rishik Racha – Portfolio Website 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built to showcase my skills, projects, and professional experience as a full-stack web developer. The site reflects my current capabilities in frontend development, design, and modern web architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧭 Overview
 
-## Expanding the ESLint configuration
+- Built using **React + Vite** for a fast and modular frontend
+- Styled with custom **CSS** for a clean, responsive layout
+- Uses **Redux** for managing global UI state (theme toggling, etc.)
+- Organized into sections for About, Skills, Projects, Contact, and Resume
+- Optimized for speed, responsiveness, and readability across devices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Vite, CSS
+- **State Management:** Redux
+- **Other Tools:** GitHub Pages (for hosting), React Icons
+
+---
+
+## 📸 Preview
+
+Coming soon!  
+(Add a screenshot or (https://rishikracha.github.io/Portfolio/)
+
+---
+
+## 🎯 Goals
+
+- Provide recruiters and collaborators with an up-to-date view of my skills and projects
+- Serve as a central hub for my online presence and resume
+- Practice modern frontend architecture and responsive design principles
+
+---
+
+## 🚀 Future Enhancements
+
+- Add dynamic blog or dev notes section
+- Improve animations and transitions
+- Include project video previews
+
+---
+
+## 🧑‍💻 About Me
+
+Hi, I'm **Rishik Racha**, a web developer with experience in full-stack development, cybersecurity, and modern frontend tools.  
+📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/rishikracha) or visit the site: [rishikracha.github.io/Portfolio](https://rishikracha.github.io/Portfolio)
