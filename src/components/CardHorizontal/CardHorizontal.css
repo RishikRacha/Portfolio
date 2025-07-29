@@ -34,7 +34,10 @@
 
 
 
-.moveLeft1024 {transform: translateX(-95%);}
+.moveLeft1024 {
+    transform: translateX(-95%);
+    z-index: 3;    
+}
 
 .leftrightbtns {
     display: flex;

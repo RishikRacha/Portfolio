@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import './Banner.css'
 import swagImg from '../../assets/coverImg_swag.JPG'
-import intenseImg from '../../assets/coverImg_intense.JPG'
 import paintingImg from '../../assets/coverImg_painting.JPG'
 import vanGogh from '../../assets/logoIcon_vanGogh.png'
-import bannerOne from '../../assets/BannerImages/BannerOne.jpg'
+import bannerOne from '../../assets/BannerImages/BannerOneEdit.jpg'
 import bannerLogoOne from '../../assets/BannerLogoIcons/logoOne.png'
 import bannerLogoTwoo from '../../assets/BannerLogoIcons/BITS_Horizontal.png'
 import bannerLogoTwo from '../../assets/BannerLogoIcons/BannerLogoTwo.png'
@@ -20,7 +19,7 @@ let bannersData = [
     },
     {   id:'pancha',
         // logo: 'https://support.erp.bits-pilani.ac.in/osta/uploads/HorizontalShort_version_crop.png?1727327354',
-        logo: bannerLogoTwo,
+        logo: bannerLogoTwoo,
         image: swagImg,
         description: "Other than that, I am also a passionate Video/Film Editor, who occasionally dabbles in Photography and Cinematography. I'm also into graphic design."
     },

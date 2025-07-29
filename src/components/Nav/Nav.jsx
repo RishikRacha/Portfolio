@@ -13,6 +13,8 @@ function Nav() {
     const [isOpaque, setIsOpaque] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
 
+    const resumeURL = import.meta.env.VITE_RESUME_URL;
+
     useEffect(() => {
       const handleScroll = () => {setIsOpaque(window.scrollY > 10);}; // make nav opaque after scrolling a lil bit
 
@@ -36,6 +38,7 @@ function Nav() {
       setTimeout(() => document.getElementById('mobileText').innerText = 'Mobile', 500)
     }
 
+    console.log(resumeURL)
     
     return (
     <div className={`navContainer ${isOpaque ? 'opaque' : ''} `}>
@@ -51,7 +54,7 @@ function Nav() {
             <Link className='navButton' to="/#subheading2" onClick={toggleNav}>Skills</Link>
             <Link className='navButton' to="/#subheading3"  onClick={toggleNav}>Projects</Link>
             <Link className='navButton' to="/#subheading4" onClick={toggleNav}>Experience</Link>
-            <Link className='navButton' to="https://drive.google.com/file/d/182z8aV2JoByVJPGYE8U9kcPZ9ik2UZ_L/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume/CV</Link>
+            <Link className='navButton' to={resumeURL} target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>
 
         <div className='right'>

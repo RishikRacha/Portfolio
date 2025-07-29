@@ -121,8 +121,14 @@
         margin-bottom: 50px;
         box-sizing: border-box;
         padding: 20px;
-        text-shadow: 2px 2px 1px rgb(0, 0, 0);
+        text-shadow: 2px 2px 1px rgb(0, 0, 0), 0px 0px 4px rgba(0, 0, 0, 0.93), 0px 0px 6px rgba(0, 0, 0, 0.712), 0px 0px 8px rgba(0, 0, 0, 0.557);
         font-size: 0.9rem;
 
+    }
+
+    .bannerTitleContainer {
+        justify-content: space-between;
+        padding-top: 15vh;
+        box-sizing: border-box;
     }
 }

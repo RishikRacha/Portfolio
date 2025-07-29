@@ -56,11 +56,17 @@ function CardHorizontal() {
             <Card {...cardsInfo[0]}/>
             {/* <Card {...cardsInfo[0]} /> */}
             {/* <Card {...cardsInfo[1]} /> */}
-            </div>
-       
+        </div>
+        
 
+        <h2 className='bodyTitle'>Web Dev Projects</h2>
+        <div className='cardsContainerNew'>
+            <Card {...cardsInfo[4]}/>
+            <Card {...cardsInfo[5]}/>
+        </div>
+       
         <h2 className='bodyTitle'>Programming skills</h2>
-        {LrButtons(1)}
+        {LrButtons(2)}
         <div className='cardsContainerNew minimalCardsContainer'>
             <MinimalCard {...cardsInfo[8]}/>
             <MinimalCard {...cardsInfo[9]}/>
@@ -74,12 +80,6 @@ function CardHorizontal() {
 
         </div>
 
-
-        <h2 className='bodyTitle'>Projects</h2>
-        <div className='cardsContainerNew'>
-            <Card {...cardsInfo[4]}/>
-            <Card {...cardsInfo[5]}/>
-        </div>
 
         <h2 className='bodyTitle'>Work Experience</h2>
         <div className='cardsContainerNew'>
