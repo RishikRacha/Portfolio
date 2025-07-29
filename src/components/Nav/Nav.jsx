@@ -38,7 +38,6 @@ function Nav() {
       setTimeout(() => document.getElementById('mobileText').innerText = 'Mobile', 500)
     }
 
-    console.log(resumeURL)
     
     return (
     <div className={`navContainer ${isOpaque ? 'opaque' : ''} `}>
@@ -51,8 +50,8 @@ function Nav() {
             <div className={`navOverlay ${navOpen ? 'navOpen' : ''}`}  onClick={toggleNav}></div>
             <Link className='navButton' to="/" onClick={() => {scrollToSection(11); toggleNav();}}>Home</Link>
             <Link className='navButton' to="/#subheading1" onClick={toggleNav}>Games</Link>
-            <Link className='navButton' to="/#subheading2" onClick={toggleNav}>Skills</Link>
-            <Link className='navButton' to="/#subheading3"  onClick={toggleNav}>Projects</Link>
+            <Link className='navButton' to="/#subheading2"  onClick={toggleNav}>Projects</Link>
+            <Link className='navButton' to="/#subheading3" onClick={toggleNav}>Skills</Link>
             <Link className='navButton' to="/#subheading4" onClick={toggleNav}>Experience</Link>
             <Link className='navButton' to={resumeURL} target="_blank" rel="noopener noreferrer">Resume/CV</Link>
         </div>

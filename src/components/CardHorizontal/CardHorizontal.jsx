@@ -66,7 +66,7 @@ function CardHorizontal() {
         </div>
        
         <h2 className='bodyTitle'>Programming skills</h2>
-        {LrButtons(2)}
+        {LrButtons(-1)}
         <div className='cardsContainerNew minimalCardsContainer'>
             <MinimalCard {...cardsInfo[8]}/>
             <MinimalCard {...cardsInfo[9]}/>

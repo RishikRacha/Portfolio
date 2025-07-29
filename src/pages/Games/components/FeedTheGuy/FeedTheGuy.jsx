@@ -43,7 +43,7 @@ function FeedTheGuy() {
     
 
     function eatSalad() {
-        if(energyLevel < fatLevel+2) setEnergyLevel(prev => prev+1);
+        if(energyLevel <= fatLevel) setEnergyLevel(prev => prev+1);
     }
 
     function _seeLevels() {

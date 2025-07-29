@@ -18,7 +18,7 @@
 
 .hoverContainer:hover {
     transform: scale(1.4);
-    transform-origin: 50% 100%;
+    transform-origin: 50% 50%;
     /* animation: scaleUp 0.4s ease forwards; */
 
     /* transition: scale 0.6s ease, height 0.6s ease; */
@@ -28,6 +28,7 @@
     z-index: 20;
     box-shadow: 0px 4px 15px rgb(0, 0, 0);
     cursor: pointer;
+    overflow: visible;
 }
 
 
@@ -70,7 +71,8 @@
 
 @media (max-width: 768px) {
     .cardContainer{
-        width: 20vw;
+        width: 25vw;
+        height: calc(25vw/1.77);
     }
     .moregoBtn {
         display: none;
@@ -85,14 +87,15 @@
         height:fit-content;
         padding: 0 10px;
         position: relative;
+        height: 20px;
     }
     .cardText div {
         height: 20px;
     }
     .hoverContainer:hover {
-        height: 116px;
+        height: calc(25vw/1.77 + 35px);
         transform: scale(1.2);
-        transform-origin: 50% 0%;
+        transform-origin: 50% 100%;
         z-index: 1000;
     }
     #hoverDescription {
@@ -101,7 +104,7 @@
 }
 @media (max-width: 600px) {
     .cardContainer{
-        width: 25vw;
+        width: 30vw;
     }
 }
 @media (max-width: 512px) {
@@ -131,7 +134,7 @@
     }
     .hoverContainer:hover {
         transform: scale(1.2);
-        transform-origin: 50% 50%;
+        transform-origin: 50% 100%;
         z-index: 1000;
     }
 }
