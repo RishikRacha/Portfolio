@@ -84,6 +84,7 @@ function CardHorizontal() {
         <h2 className='bodyTitle'>Work Experience</h2>
         <div className='cardsContainerNew'>
             {/* <Card name={cardsInfo[4].name} image={PrimEraLogo} description={cardsInfo[4].description} url={cardsInfo[4].url}/> */}
+            <Card {...cardsInfo[17]}/>
             <Card {...cardsInfo[6]}/>
             <Card {...cardsInfo[7]}/>
         </div>

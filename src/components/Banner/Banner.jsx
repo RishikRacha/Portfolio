@@ -12,9 +12,14 @@ import bannerLogoTwo from '../../assets/BannerLogoIcons/BannerLogoTwo.png'
 
 let colorfulImg = 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8fDA%3D'
 let bannersData = [
+    // {   id:'Witcher3',
+    //     logo: bannerLogoOne,
+    //     description: `Hi! I am Rishik, a software developer based in Hyderabad. I graduated from BITS Pilani in 2024 with a degree in Electronics Engineering. I made this website using React, a pinch of Redux and a Spotify subscription.`,
+    //     image: bannerOne,
+    // },
     {   id:'Witcher3',
         logo: bannerLogoOne,
-        description: `Hi! I am Rishik, a software developer based in Hyderabad. I graduated from BITS Pilani in 2024 with a degree in Electronics Engineering. I made this website using React, a pinch of Redux and a Spotify subscription.`,
+        description: `Hi! I'm Rishik, a software engineer from Hyderabad. I graduated from BITS Pilani in 2024 and somehow went from building React apps to teaching computers to make slightly better decisions. This website was made with React, a pinch of Redux, Python-induced confidence, and a Spotify subscription.`,
         image: bannerOne,
     },
     {   id:'pancha',

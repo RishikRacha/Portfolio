@@ -2,6 +2,7 @@ import React from "react";
 import DrumKitPhoto from "../../assets/CardsInfo/DrumKitCard.jpg";
 import SimonSaysPhoto from "../../assets/CardsInfo/SimonSaysCard.jpg";
 import PrimEraLogo from "../../assets/CardsInfo/PrimEraLogo.jpg";
+import GrahithLogo from "../../assets/CardsInfo/GrahithLogo.webp";
 import IsSevenCard from "../../assets/CardsInfo/IsSevenCard.jpg";
 import FeedTheManCard from "../../assets/CardsInfo/FeedTheManCard.jpg";
 import AmmuseumCard from "../../assets/CardsInfo/AmmuseumCard.jpg";
@@ -98,7 +99,15 @@ export default [
     ,{ name: "NodeJS", image: "https://s3.eu-west-1.amazonaws.com/redsys-prod/articles/805986adacd01b9880e272ba/images/teaserImage_xxxx_Shutterstock_1740811289_1697693002184.jpg"}
     ,{ name: "Java", image: 'https://www.macworld.com/wp-content/uploads/2023/01/learn_java_on_mac.jpg?quality=50&strip=all'}
     ,{ name: "Python", image: "https://img1.wallspic.com/previews/5/9/3/3/6/163395/163395-python-data_2019_survey-standing-data_science-big_data-550x310.jpg"}
-    ,{ name: "mySQL", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBn9djlMmqMEnNhETDtAZUaVMxhO5jvldqqA&s"}
+    ,{ name: "mySQL", image: "https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/Azure-SQL-Server-Monitoring.png/_jcr_content/renditions/cq5dam.web.1280.1280.png"}
     ,{ name: "C++", image: "https://miro.medium.com/v2/resize:fit:1400/1*ImTT0nd7BZUPe3S8XS_juA.png"}
     ,{ name: "C#", image: "https://kodigowebstorage.blob.core.windows.net/kodigowebsite/2023/08/csharp.png"}
+    ,{
+        name: "Grahith Learning LLP",
+        image: GrahithLogo,
+        description: <h3>Full Stack Developer</h3>,
+        url: "https://www.linkedin.com/company/grahith/",
+        expandedInfo:
+            "Worked on designing intuitive user experiences across web and mobile products, translating business requirements into user-centred interfaces. Collaborated closely with the product and engineering teams to create wireframes, high-fidelity UI designs, and design systems while iterating based on user feedback. Contributed to improving usability, visual consistency, and overall product experience across multiple features.",
+    }
 ];
